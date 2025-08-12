@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 5rem;
+  width: 100%;
+
+  .topRightImage {
+    width: 45rem;
+    height: auto;
+
+    position: absolute;
+    top: -15rem;
+    right: -18.75rem;
+
+    transform: rotate(-140deg);
+  }
+
+  .header {
+    margin-top: 4.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    .navList {
+      list-style: none;
+
+      font-size: 1.25rem;
+      font-family: "Libre Baskerville", serif;
+      font-weight: 400;
+
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+  }
+
+  .main {
+    .landscape {
+      width: 100vw;
+      height: auto;
+    }
+
+    .nameDataSection {
+      margin-top: 10rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      .weddingNames {
+        width: 50vw;
+        height: auto;
+      }
+
+      .datesSpan {
+        color: #626624;
+        font-family: "Libertinus Mono";
+        font-size: 2.75rem;
+      }
+    }
+
+    .letterSection {
+      height: 200vh;
+      margin-top: 10rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .letterImage {
+        position: absolute;
+        width: 75vw;
+        height: auto;
+      }
+
+      .letterText {
+        width: 50vw;
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+  }
+}
