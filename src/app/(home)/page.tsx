@@ -48,24 +48,40 @@ export default function Home() {
 
         <section className={styles.letterSection}>
           <Image src={frame_1} alt="" className={styles.letterImage} />
-          <p className={styles.letterText}>
-            Cari amici e familiari, <br /> A Itália faz parte da nossa história
-            e da nossa trajetória como casal. Mais do que um lugar, ela
-            representa uma conexão profunda com as nossas memórias, nossos
-            sonhos e com a cultura que o Filippo carrega — e que, com o tempo,
-            também se tornou parte de nós. Foi cenário de viagens inesquecíveis,
-            de descobertas e de tantos momentos especiais que vivemos juntos ao
-            longo dos anos. <br /> Por isso, escolhemos a Toscana — com suas
-            paisagens encantadoras, seus vinhedos, suas colinas e sua atmosfera
-            romântica — para celebrar o amor e o início de um novo capítulo das
-            nossas vidas. <br /> Estamos preparando tudo com muito carinho,
-            desejando que esses dias tenham a nossa essência, sejam felizes e
-            inesquecíveis para todos que estarão conosco. <br /> A presença de
-            cada um de vocês tornará esse momento ainda mais especial. <br />
-            Aqui reunimos informações importantes para que possam se organizar e
-            aproveitar essa experiência da melhor forma possível. <br /> Vi
-            aspettiamo in Toscana! <br /> Com carinho, <br /> Amanda & Filippo
-          </p>
+          <div className={styles.letterText}>
+            <span className={styles.textSpan}>Cari amici e familiari,</span>
+            <span className={styles.textSpan}>
+              A Itália faz parte da nossa história e da nossa trajetória como
+              casal. Mais do que um lugar, ela representa uma conexão profunda
+              com as nossas memórias, nossos sonhos e com a cultura que o
+              Filippo carrega — e que, com o tempo, também se tornou parte de
+              nós. Foi cenário de viagens inesquecíveis, de descobertas e de
+              tantos momentos especiais que vivemos juntos ao longo dos anos.
+            </span>
+            <span className={styles.textSpan}>
+              Por isso, escolhemos a Toscana — com suas paisagens encantadoras,
+              seus vinhedos, suas colinas e sua atmosfera romântica — para
+              celebrar o amor e o início de um novo capítulo das nossas vidas.
+            </span>
+            <span className={styles.textSpan}>
+              Estamos preparando tudo com muito carinho, desejando que esses
+              dias tenham a nossa essência, sejam felizes e inesquecíveis para
+              todos que estarão conosco.
+            </span>
+            <span className={styles.textSpan}>
+              A presença de cada um de vocês tornará esse momento ainda mais
+              especial.
+            </span>
+            <span className={styles.textSpan}>
+              Aqui reunimos informações importantes para que possam se organizar
+              e aproveitar essa experiência da melhor forma possível.
+            </span>
+            <span className={styles.textSpan}>Vi aspettiamo in Toscana!</span>
+            <span className={styles.textSpan}>
+              Com carinho,
+              <br /> Amanda & Filippo
+            </span>
+          </div>
         </section>
       </main>
     </div>
