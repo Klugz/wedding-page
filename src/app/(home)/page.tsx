@@ -16,13 +16,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <header className={`${styles.header} ${styles.column}`}>
-        <Image src={af_logo} alt="" width={300} />
-        <Image
-          src={double_tulips}
-          alt=""
-          width={300}
-          className={styles.topRightImage}
-        />
+        <Image src={af_logo} alt="" className={styles.image} />
+        <Image src={double_tulips} alt="" className={styles.topRightImage} />
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
             <li>HOME</li>
@@ -91,7 +86,7 @@ export default function Home() {
           <Image src={minor_banner} alt="" className={styles.minorBanner} />
           <span className={styles.textSpan}>Faltam</span>
           <Image src={motorcycle} alt="" className={styles.motorcycle} />
-          <Image src={major_banner} alt="" className={styles.minorBanner} />
+          <Image src={major_banner} alt="" className={styles.majorBanner} />
           <div className={styles.countdownDiv}>
             <span className={styles.countdownSpan}>
               <span className={styles.numbers}>00</span>
@@ -110,6 +105,10 @@ export default function Home() {
               <span className={styles.text}>MINUTOS</span>
             </span>
           </div>
+        </section>
+
+        <section className={styles.frameSection}>
+          <Image src={frame_1} alt="" className={styles.frameImage} />
         </section>
       </main>
     </div>
