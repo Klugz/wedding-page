@@ -214,6 +214,13 @@ export default function Home() {
             CONFIRA AS SUGESTÕES DE HOSPEDAGENS FEITA PELA AGÊNCIA MHM
           </span>
         </section>
+
+        <section className={styles.frameSection}>
+          <Image src={frame_1} alt="" className={styles.frameImage} />
+          <div className={styles.frameText}>
+            <span className={styles.title}>Recomendações</span>
+          </div>
+        </section>
       </main>
     </div>
   );
