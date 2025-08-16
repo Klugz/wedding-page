@@ -13,6 +13,8 @@ import pizza from "../../public/imgs/pizza.png";
 import grapes from "../../public/imgs/grapes.png";
 import wedding_rings from "../../public/imgs/wedding_rings.png";
 import plane from "../../public/imgs/plane.png";
+import line_division from "../../public/imgs/line_division.png";
+import bagages from "../../public/imgs/bagages.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 
@@ -201,6 +203,16 @@ export default function Home() {
           <button className={styles.button}>
             <span>CONTATO AGÊNCIA DE VIAGEM MHM</span>
           </button>
+        </section>
+
+        <section className={`${styles.housingSection} ${styles.column}`}>
+          <Image src={line_division} alt="" className={styles.lineDivision} />
+          <span className={styles.title}>Hospedagem</span>
+          <Image src={bagages} alt="" className={styles.bagagesImage} />
+          <button className={styles.button}>CLIQUE AQUI</button>
+          <span className={styles.span}>
+            CONFIRA AS SUGESTÕES DE HOSPEDAGENS FEITA PELA AGÊNCIA MHM
+          </span>
         </section>
       </main>
     </div>

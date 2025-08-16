@@ -246,5 +246,35 @@
         }
       }
     }
+
+    .housingSection {
+      margin-top: 15rem;
+
+      .lineDivision {
+        width: 98vw;
+        height: 10rem;
+      }
+
+      .title {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
+
+      .bagagesImage {
+        width: 30vw;
+        height: auto;
+        margin-bottom: 5rem;
+      }
+
+      .button {
+        font-size: 1.5rem;
+        width: 20vw;
+        margin-bottom: 3rem;
+      }
+
+      .span {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
