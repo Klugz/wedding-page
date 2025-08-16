@@ -1,31 +1,27 @@
-.container {
+.column {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
 
-  margin-top: 5rem;
-  width: 100%;
-
-  .topRightImage {
-    width: 45rem;
-    height: auto;
-
-    position: absolute;
-    top: -15rem;
-    right: -18.75rem;
-
-    transform: rotate(-140deg);
-  }
+.container {
+  color: var(--text-color);
 
   .header {
     margin-top: 4.25rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 5rem;
+
+    .topRightImage {
+      width: 45rem;
+      height: auto;
+
+      position: absolute;
+      top: -15rem;
+      right: -18.75rem;
+
+      transform: rotate(-140deg);
+    }
 
     .navList {
       list-style: none;
@@ -46,13 +42,8 @@
       height: auto;
     }
 
-    .nameDataSection {
+    .nameDateSection {
       margin-top: 10rem;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       gap: 1rem;
 
       .weddingNames {
@@ -61,13 +52,12 @@
       }
 
       .datesSpan {
-        color: #474a33;
         font-family: "Libertinus Mono";
         font-size: 2.75rem;
       }
     }
 
-    .letterSection {
+    .frameSection {
       height: 200vh;
       margin-top: 10rem;
 
@@ -75,14 +65,13 @@
       align-items: center;
       justify-content: center;
 
-      .letterImage {
+      .frameImage {
         position: absolute;
         width: 75vw;
         height: auto;
       }
 
-      .letterText {
-        color: #474a33;
+      .letter {
         font-family: "Libertinus Mono";
         font-weight: 400;
         width: 50vw;
@@ -96,6 +85,63 @@
         .textSpan {
           text-align: center;
           font-size: 2.25rem;
+        }
+      }
+    }
+
+    .countdownSection {
+      margin-top: 20rem;
+
+      .minorBanner {
+        height: auto;
+        width: 60vw;
+      }
+
+      .textSpan {
+        text-align: center;
+        font-size: 3.25rem;
+        position: relative;
+        top: -17.5rem;
+      }
+
+      .motorcycle {
+        height: auto;
+        width: 60vw;
+      }
+
+      .countdownDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        top: -8.5rem;
+
+        .division {
+          font-size: 2.75rem;
+        }
+
+        .countdownSpan {
+          width: 10rem;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .text {
+            position: relative;
+            bottom: -5rem;
+            font-size: 1.5rem;
+          }
+
+          .numbers {
+            font-size: 2.25rem;
+          }
+
+          .middleNumber {
+            position: relative;
+            bottom: -1rem;
+          }
         }
       }
     }

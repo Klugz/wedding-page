@@ -6,14 +6,17 @@ import landscape from "../../public/imgs/landscape.png";
 import double_tulips from "../../public/imgs/double_tulips.png";
 import wedding_names from "../../public/imgs/wedding_names.png";
 import frame_1 from "../../public/imgs/frame_1.png";
+import minor_banner from "../../public/imgs/minor_banner.png";
+import major_banner from "../../public/imgs/major_banner.png";
+import motorcycle from "../../public/imgs/motorcycle.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Image src={af_logo} alt="" width={300} />
-      <header className={styles.header}>
+      <header className={`${styles.header} ${styles.column}`}>
+        <Image src={af_logo} alt="" width={300} />
         <Image
           src={double_tulips}
           alt=""
@@ -39,16 +42,16 @@ export default function Home() {
           <Image src={landscape} alt="" className={styles.landscape} />
         </section>
 
-        <section className={styles.nameDataSection}>
+        <section className={`${styles.nameDateSection} ${styles.column}`}>
           <Image src={wedding_names} alt="" className={styles.weddingNames} />
           <span className={styles.datesSpan}>
             26 a 29 de maio de 2026 <br /> podere lamone & lamino
           </span>
         </section>
 
-        <section className={styles.letterSection}>
-          <Image src={frame_1} alt="" className={styles.letterImage} />
-          <div className={styles.letterText}>
+        <section className={styles.frameSection}>
+          <Image src={frame_1} alt="" className={styles.frameImage} />
+          <div className={styles.letter}>
             <span className={styles.textSpan}>Cari amici e familiari,</span>
             <span className={styles.textSpan}>
               A Itália faz parte da nossa história e da nossa trajetória como
@@ -80,6 +83,31 @@ export default function Home() {
             <span className={styles.textSpan}>
               Com carinho,
               <br /> Amanda & Filippo
+            </span>
+          </div>
+        </section>
+
+        <section className={`${styles.countdownSection} ${styles.column}`}>
+          <Image src={minor_banner} alt="" className={styles.minorBanner} />
+          <span className={styles.textSpan}>Faltam</span>
+          <Image src={motorcycle} alt="" className={styles.motorcycle} />
+          <Image src={major_banner} alt="" className={styles.minorBanner} />
+          <div className={styles.countdownDiv}>
+            <span className={styles.countdownSpan}>
+              <span className={styles.numbers}>00</span>
+              <span className={styles.text}>DIAS</span>
+            </span>
+            <div className={styles.division}>:</div>
+            <span className={styles.countdownSpan}>
+              <span className={`${styles.numbers} ${styles.middleNumber}`}>
+                00
+              </span>
+              <span className={styles.text}>HORAS</span>
+            </span>
+            <div className={styles.division}>:</div>
+            <span className={styles.countdownSpan}>
+              <span className={styles.numbers}>00</span>
+              <span className={styles.text}>MINUTOS</span>
             </span>
           </div>
         </section>
