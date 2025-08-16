@@ -10,6 +10,21 @@
   height: auto;
 }
 
+.title {
+  font-size: 4.5rem;
+  text-decoration: underline;
+}
+
+.button {
+  color: white;
+  font-family: "Libre Baskerville";
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background-color: var(--text-color);
+  padding: 1rem;
+}
+
 .container {
   width: 100vw;
   overflow-x: hidden;
@@ -96,11 +111,6 @@
         .textSpan {
           text-align: center;
           font-size: 2.25rem;
-        }
-
-        .textHeader {
-          font-size: 4.5rem;
-          text-decoration: underline;
         }
 
         .infoDiv {
@@ -200,6 +210,38 @@
           .middleNumber {
             position: relative;
             bottom: -1rem;
+          }
+        }
+      }
+    }
+
+    .travelingSection {
+      margin-top: 15rem;
+
+      .header {
+        margin-bottom: 7.5rem;
+        .planeImage {
+          width: 30vw;
+          height: auto;
+        }
+      }
+
+      .paragraph {
+        width: 45vw;
+        font-size: 1.5rem;
+        text-align: center;
+
+        .textSpan {
+          margin-bottom: 3rem;
+        }
+
+        .airportList {
+          text-align: left;
+          text-decoration: underline;
+          margin-bottom: 5rem;
+
+          .airportItem {
+            margin-bottom: 2rem;
           }
         }
       }

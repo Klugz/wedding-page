@@ -12,6 +12,7 @@ import motorcycle from "../../public/imgs/motorcycle.png";
 import pizza from "../../public/imgs/pizza.png";
 import grapes from "../../public/imgs/grapes.png";
 import wedding_rings from "../../public/imgs/wedding_rings.png";
+import plane from "../../public/imgs/plane.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 
@@ -113,7 +114,7 @@ export default function Home() {
         <section className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
-            <span className={styles.textHeader}>Programação</span>
+            <span className={styles.title}>Programação</span>
             <div className={styles.infoDiv}>
               <div className={styles.infoSpans}>
                 <span className={styles.headerSpan}>Welcome dinner</span>
@@ -145,6 +146,61 @@ export default function Home() {
               <Image src={wedding_rings} alt="" className={styles.sideImage} />
             </div>
           </div>
+        </section>
+
+        <section className={`${styles.travelingSection} ${styles.column}`}>
+          <header className={`${styles.header} ${styles.column}`}>
+            <span className={styles.title}>Como Chegar</span>
+            <Image src={plane} alt="" className={styles.planeImage} />
+          </header>
+          <p className={`${styles.paragraph} ${styles.column}`}>
+            <span className={styles.textSpan}>
+              Para quem vem do Brasil, a melhor forma de chegar até a região da
+              toscana é voando até a Itália, com destino final nas cidades de
+              Roma ou Florença, que são os aeroportos mais próximos da região
+            </span>
+            <span className={styles.textSpan}>
+              Não há voos diretos do Brasil para Florença, mas é possível chegar
+              fazendo conexão nas principais cidades da Europa, como Lisboa,
+              Madri, Paris, Londres, Viena, Frankfurt ou Roma.
+            </span>
+            <span className={styles.textSpan}>
+              A maneira mais prática e confortável de chegar até a região é
+              alugar um carro, tanto em Roma quanto em Florença. Assim, vocês
+              terão mobilidade para explorar as cidades vizinhas, os vinhedos e
+              as paisagens incríveis da Toscana.
+            </span>
+            <span className={styles.textSpan}>
+              As estradas são bem sinalizadas, seguras e com paisagens de tirar
+              o fôlego ao longo do caminho.
+            </span>
+            <ul className={styles.airportList}>
+              <li className={styles.airportItem}>
+                Aeroporto de Roma (Fiumicino – FCO) <br /> Aproximadamente 2h30
+                a 3h de carro até Val d’Orcia, toscana.
+              </li>
+              <li className={styles.airportItem}>
+                Aeroporto de Florença (FLR) <br /> Aproximadamente 1h45 a 2h de
+                carro até Val d’Orcia, Toscana.
+              </li>
+            </ul>
+            <span className={styles.textSpan}>DICAS IMPORTANTES</span>
+            <span className={styles.textSpan}>
+              Recomendamos a compra das passagens aéreas com antecedência, tanto
+              para garantir melhores tarifas quanto para ter mais opções de voos
+              e conexões.
+            </span>
+            <span className={styles.textSpan}>
+              Para quem deseja praticidade, indicamos a Agência MHM, que está
+              nos auxiliando em toda a organização da viagem. Eles oferecem
+              suporte na emissão das passagens, na escolha dos melhores trajetos
+              e também no aluguel de carro, tornando todo o processo mais
+              simples e confortável.
+            </span>
+          </p>
+          <button className={styles.button}>
+            <span>CONTATO AGÊNCIA DE VIAGEM MHM</span>
+          </button>
         </section>
       </main>
     </div>
