@@ -106,10 +106,6 @@ export default function Home() {
             </span>
           </div>
         </section>
-
-        <section className={styles.frameSection}>
-          <Image src={frame_1} alt="" className={styles.frameImage} />
-        </section>
       </main>
     </div>
   );
