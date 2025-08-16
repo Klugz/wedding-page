@@ -9,6 +9,9 @@ import frame_1 from "../../public/imgs/frame_1.png";
 import minor_banner from "../../public/imgs/minor_banner.png";
 import major_banner from "../../public/imgs/major_banner.png";
 import motorcycle from "../../public/imgs/motorcycle.png";
+import pizza from "../../public/imgs/pizza.png";
+import grapes from "../../public/imgs/grapes.png";
+import wedding_rings from "../../public/imgs/wedding_rings.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 
@@ -46,7 +49,7 @@ export default function Home() {
 
         <section className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
-          <div className={styles.letter}>
+          <div className={styles.frameText}>
             <span className={styles.textSpan}>Cari amici e familiari,</span>
             <span className={styles.textSpan}>
               A Itália faz parte da nossa história e da nossa trajetória como
@@ -104,6 +107,43 @@ export default function Home() {
               <span className={styles.numbers}>00</span>
               <span className={styles.text}>MINUTOS</span>
             </span>
+          </div>
+        </section>
+
+        <section className={styles.frameSection}>
+          <Image src={frame_1} alt="" className={styles.frameImage} />
+          <div className={styles.frameText}>
+            <span className={styles.textHeader}>Programação</span>
+            <div className={styles.infoDiv}>
+              <div className={styles.infoSpans}>
+                <span className={styles.headerSpan}>Welcome dinner</span>
+                <span className={styles.dateSpan}>26 MAIO DE 2026</span>
+                <span className={styles.hourSpan}>18h30</span>
+                <a className={styles.textLink}>PODERE LAMONE LAMINO</a>
+                <a className={styles.textLink}>TRAJE: ESPORTE FINO</a>
+              </div>
+              <Image src={pizza} alt="" className={styles.sideImage} />
+            </div>
+            <div className={styles.infoDiv}>
+              <Image src={grapes} alt="" className={styles.sideImage} />
+              <div className={styles.infoSpans}>
+                <span className={styles.headerSpan}>Agriturismo</span>
+                <span className={styles.dateSpan}>27 MAIO DE 2026</span>
+                <span className={styles.hourSpan}>10h00</span>
+                <a className={styles.textLink}>VERIFICAR LOCAL</a>
+                <a className={styles.textLink}>INFORMAÇÕES SOBRE O PASSEIO</a>
+              </div>
+            </div>
+            <div className={styles.infoDiv}>
+              <div className={styles.infoSpans}>
+                <span className={styles.headerSpan}>Casamento</span>
+                <span className={styles.dateSpan}>28 MAIO DE 2026</span>
+                <span className={styles.hourSpan}>17h00</span>
+                <a className={styles.textLink}>PODERE LAMONE LAMINO</a>
+                <a className={styles.textLink}>TRAJE: SOCIAL COMPLETO</a>
+              </div>
+              <Image src={wedding_rings} alt="" className={styles.sideImage} />
+            </div>
           </div>
         </section>
       </main>
