@@ -29,20 +29,20 @@ export default function Home() {
         <Image src={double_tulips} alt="" className={styles.topRightImage} />
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
-            <li>HOME</li>
-            <li>PROGRAMAÇÃO</li>
-            <li>COMO CHEGAR</li>
-            <li>HOSPEDAGEM</li>
-            <li>RECOMENDAÇÕES</li>
-            <li>CONTATO</li>
-            <li>CONFIRMAR PRESENÇA</li>
-            <li>PRESENTES</li>
+            <a href="#">HOME</a>
+            <a href="#schedule">PROGRAMAÇÃO</a>
+            <a href="#traveling">COMO CHEGAR</a>
+            <a href="#housing">HOSPEDAGEM</a>
+            <a href="#recommendations">RECOMENDAÇÕES</a>
+            <a href="#contact">CONTATO</a>
+            <a href="#confirmation">CONFIRMAR PRESENÇA</a>
+            <a href="#gifts">PRESENTES</a>
           </ul>
         </nav>
       </header>
 
       <main className={styles.main}>
-        <section>
+        <section id="home">
           <Image src={landscape} alt="" className={styles.landscape} />
         </section>
 
@@ -116,7 +116,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.frameSection}>
+        <section id="schedule" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
             <span className={styles.title}>Programação</span>
@@ -153,7 +153,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={`${styles.travelingSection} ${styles.column}`}>
+        <section
+          id="traveling"
+          className={`${styles.travelingSection} ${styles.column}`}
+        >
           <header className={`${styles.header} ${styles.column}`}>
             <span className={styles.title}>Como Chegar</span>
             <Image src={plane} alt="" className={styles.planeImage} />
@@ -208,7 +211,10 @@ export default function Home() {
           </button>
         </section>
 
-        <section className={`${styles.housingSection} ${styles.column}`}>
+        <section
+          id="housing"
+          className={`${styles.housingSection} ${styles.column}`}
+        >
           <Image src={line_division} alt="" className={styles.lineDivision} />
           <span className={styles.title}>Hospedagem</span>
           <Image src={bagages} alt="" className={styles.bagagesImage} />
@@ -218,7 +224,7 @@ export default function Home() {
           </span>
         </section>
 
-        <section className={styles.frameSection}>
+        <section id="recommendations" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
             <span className={styles.title}>Recomendações</span>
