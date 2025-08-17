@@ -15,6 +15,9 @@ import wedding_rings from "../../public/imgs/wedding_rings.png";
 import plane from "../../public/imgs/plane.png";
 import line_division from "../../public/imgs/line_division.png";
 import bagages from "../../public/imgs/bagages.png";
+import forest from "../../public/imgs/forest.png";
+import mirror_and_cosmetics from "../../public/imgs/mirror_and_cosmetics.png";
+import wine_and_pasta from "../../public/imgs/wine_and_pasta.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 
@@ -219,6 +222,22 @@ export default function Home() {
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
             <span className={styles.title}>Recomendações</span>
+            <div className={styles.moreDiv}>
+              <span className={styles.span}>o que fazer na região</span>
+              <Image src={forest} alt="" className={styles.image} />
+            </div>
+            <div className={styles.moreDiv}>
+              <span className={styles.span}>restaurantes</span>
+              <Image src={wine_and_pasta} alt="" className={styles.image} />
+            </div>
+            <div className={styles.moreDiv}>
+              <span className={styles.span}>cabelo e maquiagem</span>
+              <Image
+                src={mirror_and_cosmetics}
+                alt=""
+                className={styles.image}
+              />
+            </div>
           </div>
         </section>
       </main>
