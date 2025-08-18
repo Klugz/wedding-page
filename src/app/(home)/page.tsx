@@ -29,14 +29,33 @@ export default function Home() {
         <Image src={double_tulips} alt="" className={styles.topRightImage} />
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
-            <a href="#">HOME</a>
-            <a href="#schedule">PROGRAMAÇÃO</a>
-            <a href="#traveling">COMO CHEGAR</a>
-            <a href="#housing">HOSPEDAGEM</a>
-            <a href="#recommendations">RECOMENDAÇÕES</a>
-            <a href="#contact">CONTATO</a>
-            <a href="#confirmation">CONFIRMAR PRESENÇA</a>
-            <a href="#gifts">PRESENTES</a>
+            <a className={styles.item} href="#">
+              HOME
+            </a>
+            <a className={styles.item} href="#schedule">
+              PROGRAMAÇÃO
+            </a>
+            <a className={styles.item} href="#traveling">
+              COMO CHEGAR
+            </a>
+            <a className={styles.item} href="#housing">
+              HOSPEDAGEM
+            </a>
+            <a className={styles.item} href="#recommendations">
+              RECOMENDAÇÕES
+            </a>
+            <a className={styles.item} href="#contact">
+              CONTATO
+            </a>
+            <a className={styles.item} href="#confirmation">
+              CONFIRMAR PRESENÇA
+            </a>
+            <a className={styles.item} href="#gifts">
+              PRESENTES
+            </a>
+            <a className={styles.item} href="#gifts">
+              MANUAL DO CONVIDADO
+            </a>
           </ul>
         </nav>
       </header>
@@ -245,6 +264,15 @@ export default function Home() {
               />
             </div>
           </div>
+        </section>
+
+        <section id="contact">
+          <span className={styles.title}>Contato</span>
+          <p>
+            Para mais informações ou em caso de dúvidas, entrar em contato com a
+            assessoria do casamento Lara e Julia – My Italy wedding planner
+            myitalyweddingplanner@gmail.com 41 8801-9987
+          </p>
         </section>
       </main>
     </div>

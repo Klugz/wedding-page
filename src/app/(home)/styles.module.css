@@ -29,6 +29,8 @@
   width: 100vw;
   overflow-x: hidden;
   color: var(--text-color);
+  background: url("../../public/imgs/paper_background.jpg");
+  background-size: contain;
 
   .header {
     margin-top: 4.25rem;
@@ -48,13 +50,17 @@
     .navList {
       list-style: none;
 
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-family: "Libre Baskerville", serif;
       font-weight: 400;
 
       display: flex;
       flex-direction: row;
-      gap: 1.5rem;
+      gap: 2rem;
+
+      .item:hover {
+        color: #a3a58b;
+      }
     }
   }
 
@@ -163,6 +169,11 @@
             .textLink {
               font-size: 1.5rem;
               text-decoration: underline;
+              cursor: pointer;
+            }
+
+            .textLink:hover {
+              color: #a3a58b;
             }
           }
         }
@@ -200,7 +211,7 @@
         align-items: center;
         justify-content: space-around;
         position: relative;
-        top: -8.5rem;
+        top: -10rem;
 
         .division {
           font-size: 2.75rem;
@@ -222,11 +233,6 @@
 
           .numbers {
             font-size: 2.25rem;
-          }
-
-          .middleNumber {
-            position: relative;
-            bottom: -1rem;
           }
         }
       }
@@ -253,8 +259,8 @@
         }
 
         .airportList {
-          text-align: left;
-          text-decoration: underline;
+          list-style: none;
+          text-align: center;
           margin-bottom: 5rem;
 
           .airportItem {
@@ -292,6 +298,9 @@
       .span {
         font-size: 1.5rem;
       }
+    }
+
+    .contactSection {
     }
   }
 }
