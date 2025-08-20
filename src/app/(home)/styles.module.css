@@ -301,7 +301,16 @@
     }
 
     .contactSection {
-      gap: 5rem;
+      margin-top: 15rem;
+      font-size: 1.5rem;
+      gap: 1.5rem;
+
+      .paragraphText {
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
     }
   }
 }

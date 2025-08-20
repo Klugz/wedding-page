@@ -270,12 +270,20 @@ export default function Home() {
           id="contact"
           className={`${styles.contactSection} ${styles.column}`}
         >
-          <span className={styles.title}>Contato</span>
-          <p>
-            Para mais informações ou em caso de dúvidas, entrar em contato com a
-            assessoria do casamento Lara e Julia – My Italy wedding planner
-            myitalyweddingplanner@gmail.com 41 8801-9987
+          <span className={styles.title}>contato</span>
+          <p className={styles.paragraphText}>
+            <span>Para mais informações ou em caso de dúvidas,</span>
+            <span>entrar em contato com a assessoria do casamento</span>
+            <span>Lara e Julia – My Italy wedding planner</span>
           </p>
+          <p className={styles.paragraphText}>
+            <span>myitalyweddingplanner@gmail.com</span>
+            <span>41 8801-9987</span>
+          </p>
+        </section>
+
+        <section className={styles.frameSection}>
+          <Image src={frame_1} alt="" className={styles.frameImage} />
         </section>
       </main>
     </div>
