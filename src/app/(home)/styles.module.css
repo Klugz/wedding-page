@@ -11,8 +11,8 @@
 }
 
 .title {
-  font-size: 4.5rem;
-  text-decoration: underline;
+  font-size: 5rem;
+  font-family: "Alex Brush";
 }
 
 .button {
@@ -301,6 +301,7 @@
     }
 
     .contactSection {
+      gap: 5rem;
     }
   }
 }

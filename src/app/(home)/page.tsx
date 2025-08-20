@@ -266,7 +266,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact">
+        <section
+          id="contact"
+          className={`${styles.contactSection} ${styles.column}`}
+        >
           <span className={styles.title}>Contato</span>
           <p>
             Para mais informações ou em caso de dúvidas, entrar em contato com a
