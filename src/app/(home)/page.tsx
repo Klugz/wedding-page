@@ -284,6 +284,16 @@ export default function Home() {
 
         <section className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
+          <form action="" className={`${styles.frameForm} ${styles.column}`}>
+            <fieldset className={`${styles.fieldset} ${styles.column}`}>
+              <legend className={styles.title}>Confirmar Presença</legend>
+              <input type="text" placeholder="NOME COMPLETO*" />
+              <input type="text" placeholder="NOME ACOMPANHENTE" />
+              <input type="text" placeholder="TELEFONE COM DDD*" />
+              <input type="text" placeholder="LOCAL DE HOSPEDAGEM" />
+              <input type="text" placeholder="ALGUMA RESTRIÇÃO ALIMENTAS?" />
+            </fieldset>
+          </form>
         </section>
       </main>
     </div>
