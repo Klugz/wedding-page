@@ -1,5 +1,8 @@
+"use client";
+
 import styles from "./styles.module.css";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";
@@ -21,8 +24,16 @@ import mirror_and_cosmetics from "../../public/imgs/mirror_and_cosmetics.png";
 import wine_and_pasta from "../../public/imgs/wine_and_pasta.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
+import { routerServerGlobal } from "next/dist/server/lib/router-utils/router-server-context";
 
 export default function Home() {
+  const router = useRouter();
+
+  const handleClick = (e: React.MouseEvent, route: string) => {
+    e.preventDefault();
+    router.push(route);
+  };
+
   return (
     <div className={styles.container}>
       <header className={`${styles.header} ${styles.column}`}>
@@ -145,8 +156,20 @@ export default function Home() {
                 <span className={styles.headerSpan}>Welcome dinner</span>
                 <span className={styles.dateSpan}>26 MAIO DE 2026</span>
                 <span className={styles.hourSpan}>18h30</span>
-                <a className={styles.textLink}>PODERE LAMONE LAMINO</a>
-                <a className={styles.textLink}>TRAJE: ESPORTE FINO</a>
+                <a
+                  target="_blank"
+                  className={styles.textLink}
+                  href="https://www.google.com/maps/place/Podere+Lamino/@43.057809,11.6990681,606m/data=!3m1!1e3!4m9!3m8!1s0x1329678b4265f597:0xa7cbc14effabb1d4!5m2!4m1!1i2!8m2!3d43.057809!4d11.701643!16s%2Fg%2F1td8mqr_?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+                >
+                  PODERE LAMONE LAMINO
+                </a>
+                <a
+                  target="_blank"
+                  className={styles.textLink}
+                  href="https://br.pinterest.com/amanklug/outfits-welcome-dinner"
+                >
+                  TRAJE: ESPORTE FINO
+                </a>
               </div>
               <Image src={pizza} alt="" className={styles.sideImage} />
             </div>
@@ -156,8 +179,12 @@ export default function Home() {
                 <span className={styles.headerSpan}>Agriturismo</span>
                 <span className={styles.dateSpan}>27 MAIO DE 2026</span>
                 <span className={styles.hourSpan}>10h00</span>
-                <a className={styles.textLink}>VERIFICAR LOCAL</a>
-                <a className={styles.textLink}>INFORMAÇÕES SOBRE O PASSEIO</a>
+                <a
+                  className={styles.textLink}
+                  onClick={(e) => handleClick(e, "/agriturism")}
+                >
+                  SAIBA MAIS
+                </a>
               </div>
             </div>
             <div className={styles.infoDiv}>
@@ -165,8 +192,20 @@ export default function Home() {
                 <span className={styles.headerSpan}>Casamento</span>
                 <span className={styles.dateSpan}>28 MAIO DE 2026</span>
                 <span className={styles.hourSpan}>17h00</span>
-                <a className={styles.textLink}>PODERE LAMONE LAMINO</a>
-                <a className={styles.textLink}>TRAJE: SOCIAL COMPLETO</a>
+                <a
+                  target="_blank"
+                  className={styles.textLink}
+                  href="https://www.google.com/maps/place/Podere+Lamino/@43.057809,11.6990681,606m/data=!3m1!1e3!4m9!3m8!1s0x1329678b4265f597:0xa7cbc14effabb1d4!5m2!4m1!1i2!8m2!3d43.057809!4d11.701643!16s%2Fg%2F1td8mqr_?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+                >
+                  PODERE LAMONE LAMINO
+                </a>
+                <a
+                  target="_blank"
+                  className={styles.textLink}
+                  href="https://br.pinterest.com/amanklug/outfits-wedding-day"
+                >
+                  TRAJE: SOCIAL COMPLETO
+                </a>
               </div>
               <Image src={wedding_rings} alt="" className={styles.sideImage} />
             </div>
@@ -226,7 +265,15 @@ export default function Home() {
               simples e confortável.
             </span>
           </p>
-          <button className={styles.button}>
+          <button
+            className={styles.button}
+            onClick={(e) =>
+              handleClick(
+                e,
+                "https://api.whatsapp.com/send/?phone=5541992525117&text&type=phone_number&app_absent=0"
+              )
+            }
+          >
             <span>CONTATO AGÊNCIA DE VIAGEM MHM</span>
           </button>
         </section>
@@ -238,7 +285,12 @@ export default function Home() {
           <Image src={line_division} alt="" className={styles.lineDivision} />
           <span className={styles.title}>Hospedagem</span>
           <Image src={bagages} alt="" className={styles.bagagesImage} />
-          <button className={styles.button}>CLIQUE AQUI</button>
+          <button
+            className={styles.button}
+            onClick={(e) => handleClick(e, "/housing")}
+          >
+            CLIQUE AQUI
+          </button>
           <span className={styles.span}>
             CONFIRA AS SUGESTÕES DE HOSPEDAGENS FEITA PELA AGÊNCIA MHM
           </span>
@@ -249,15 +301,31 @@ export default function Home() {
           <div className={styles.frameText}>
             <span className={styles.title}>Recomendações</span>
             <div className={styles.moreDiv}>
-              <span className={styles.span}>o que fazer na região</span>
+              <a
+                className={styles.span}
+                onClick={(e) => handleClick(e, "/recommendations")}
+              >
+                o que fazer na região
+              </a>
               <Image src={forest} alt="" className={styles.image} />
             </div>
             <div className={styles.moreDiv}>
-              <span className={styles.span}>restaurantes</span>
+              <a
+                target="_blank"
+                className={styles.span}
+                href="https://www.villaapparita.it/i/blog/la-val-d-orcia-da-gustare/128"
+              >
+                Gastronomia Típica
+              </a>
               <Image src={wine_and_pasta} alt="" className={styles.image} />
             </div>
             <div className={styles.moreDiv}>
-              <span className={styles.span}>cabelo e maquiagem</span>
+              <a
+                className={styles.span}
+                onClick={(e) => handleClick(e, "/hair_and_makeup")}
+              >
+                cabelo e maquiagem
+              </a>
               <Image
                 src={mirror_and_cosmetics}
                 alt=""
@@ -361,7 +429,12 @@ export default function Home() {
         >
           <span className={styles.title}>Presentes</span>
           <Image src={presents} alt="" className={styles.bagagesImage} />
-          <button className={styles.button}>CLIQUE AQUI</button>
+          <button
+            className={styles.button}
+            onClick={(e) => handleClick(e, "/gifts")}
+          >
+            CLIQUE AQUI
+          </button>
           <Image src={line_division} alt="" className={styles.lineDivision} />
         </section>
       </main>
