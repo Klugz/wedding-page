@@ -283,7 +283,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section className={styles.frameSection}>
+        <section id="confirmation" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <form action="" className={`${styles.frameForm} ${styles.column}`}>
             <fieldset className={`${styles.fieldset} ${styles.column}`}>
@@ -356,7 +356,7 @@ export default function Home() {
         </section>
 
         <section
-          id="presents"
+          id="gifts"
           className={`${styles.housingSection} ${styles.column}`}
         >
           <span className={styles.title}>Presentes</span>
