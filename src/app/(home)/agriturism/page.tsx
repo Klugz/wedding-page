@@ -11,7 +11,10 @@ export default function Agriturism() {
         <section className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
-            <span className={styles.title}>Agriturismo</span>
+            <p className={styles.title}>
+              <span className={styles.capitalLetter}>A</span>
+              <span>griturismo</span>
+            </p>
             <Image src={grapes} alt="" className={styles.image} />
           </div>
         </section>

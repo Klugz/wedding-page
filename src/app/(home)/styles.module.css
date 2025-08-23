@@ -13,12 +13,17 @@
 .title {
   font-size: 6rem;
   font-family: "Alex Brush";
+
+  .capitalLetter {
+    font-size: 10rem;
+    font-family: "Allura";
+  }
 }
 
 .button {
   color: white;
   font-family: "Libre Baskerville";
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: 400;
   border: none;
   background-color: var(--text-color);
@@ -86,15 +91,17 @@
       }
 
       .datesSpan {
+        color: #a3a58b;
         font-family: "Libertinus Mono";
         font-size: 2.75rem;
+        text-align: center;
       }
     }
 
     .frameSection {
       width: 50vw;
 
-      margin-top: 17.5rem;
+      margin-top: 15rem;
 
       display: flex;
       align-items: center;
@@ -109,7 +116,7 @@
         position: absolute;
         font-family: "Libre Baskerville";
         width: 50vw;
-        height: 95rem;
+        height: 101rem;
         justify-content: flex-start;
 
         .fieldset {
@@ -117,14 +124,15 @@
           width: inherit;
 
           .button {
+            padding: 0rem 2rem;
             margin-top: 5rem;
             width: 24rem;
-            height: 5rem;
+            height: 4rem;
           }
 
           div {
             width: 100%;
-            margin-left: 6rem;
+            margin-left: 6.75rem;
             font-size: 1.2rem;
             display: flex;
             flex-direction: column;
@@ -132,11 +140,16 @@
             justify-content: center;
             gap: 2.5rem;
 
+            span {
+              color: #474a33;
+            }
+
             label {
               display: flex;
               align-items: center;
               justify-content: center;
               gap: 1.5rem;
+              color: #474a33;
 
               .checkbox {
                 margin: 0;
@@ -150,7 +163,19 @@
           legend {
             font-size: 6rem;
             text-align: center;
-            margin-bottom: 7.5rem;
+            margin-bottom: 2.5rem;
+          }
+
+          .optionalLabel {
+            width: 100%;
+            margin-left: 5rem;
+            padding: 0 1rem;
+            margin-bottom: 2.5rem;
+            color: #a3a58b;
+
+            input {
+              margin-bottom: 0;
+            }
           }
 
           input {
@@ -184,11 +209,16 @@
         font-weight: 400;
         width: 50vw;
 
+        .heartImage {
+          width: 5vw;
+          height: auto;
+        }
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 5rem;
+        gap: 3rem;
 
         .textSpan {
           text-align: center;
@@ -202,10 +232,11 @@
           align-items: center;
           justify-content: center;
           gap: 5rem;
+          margin-bottom: 2.5rem;
 
           .span {
             text-decoration: underline;
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
           }
 
@@ -219,13 +250,18 @@
         }
 
         .infoDiv {
-          width: 40vw;
+          width: 50vw;
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: space-evenly;
+          gap: 10rem;
+
+          .weddingRings {
+            width: 15vw !important;
+          }
 
           .sideImage {
-            width: 15vw;
+            width: 17vw;
             height: auto;
           }
 
@@ -234,22 +270,32 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            gap: 1rem;
+            gap: 3rem;
+
+            div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            }
 
             .headerSpan {
-              font-size: 3.5rem;
+              font-family: "Alex Brush";
+              font-size: 5rem;
             }
 
             .dateSpan {
-              font-size: 1.5rem;
+              font-size: 1.15rem;
             }
 
             .hourSpan {
+              font-family: "Playfair Display";
               font-size: 3.5rem;
             }
 
             .textLink {
-              font-size: 1.5rem;
+              margin-bottom: 1rem;
+              font-size: 1.15rem;
               text-decoration: underline;
               cursor: pointer;
             }
@@ -263,7 +309,8 @@
     }
 
     .countdownSection {
-      margin-top: 20rem;
+      margin-top: 15rem;
+      gap: 1rem;
 
       .minorBanner {
         height: auto;
@@ -276,54 +323,62 @@
       }
 
       .textSpan {
+        height: 0;
         text-align: center;
-        font-size: 3.25rem;
+        font-size: 8rem;
         position: relative;
-        top: -17.5rem;
       }
 
       .motorcycle {
         height: auto;
         width: 50vw;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
+        padding-left: 5rem;
       }
 
       .countdownDiv {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         position: relative;
-        top: -10rem;
+        top: -8.325rem;
+        right: -1rem;
 
         .division {
           font-size: 2.75rem;
         }
 
-        .countdownSpan {
-          width: 10rem;
+        .countdownSpanNumbers {
+          height: 0;
+          width: 5rem;
 
+          font-size: 3rem;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
+        }
 
-          .text {
-            position: relative;
-            bottom: -5rem;
-            font-size: 1.5rem;
-          }
+        .countdownSpanText {
+          height: 0;
+          color: #a3a58b;
+          width: 10rem;
+          font-size: 1.25rem;
+          margin-top: 5rem;
+          padding: 0rem;
 
-          .numbers {
-            font-size: 2.25rem;
-          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
 
     .travelingSection {
-      margin-top: 15rem;
+      margin-top: 10rem;
+      width: 100vw;
 
       .header {
+        margin-top: 0;
         margin-bottom: 7.5rem;
         .planeImage {
           width: 30vw;
@@ -332,8 +387,8 @@
       }
 
       .paragraph {
-        width: 45vw;
-        font-size: 1.5rem;
+        width: 62vw;
+        font-size: 2rem;
         text-align: center;
 
         .textSpan {
@@ -350,25 +405,31 @@
           }
         }
       }
+
+      button {
+        width: 38rem;
+        padding: 1.5rem 0;
+        margin-top: 7rem;
+      }
     }
 
     .housingSection {
-      margin-top: 15rem;
+      margin-top: 10rem;
 
       .lineDivision {
-        width: 98vw;
-        height: 10rem;
+        width: 100vw;
+        height: auto;
+        margin-bottom: 8rem;
       }
 
       .title {
-        margin-top: 5rem;
         margin-bottom: 5rem;
       }
 
       .bagagesImage {
         width: 30vw;
         height: auto;
-        margin-bottom: 5rem;
+        margin-bottom: 8rem;
       }
 
       .button {
@@ -392,6 +453,36 @@
           display: block;
           text-align: center;
         }
+      }
+    }
+
+    .giftsSection {
+      margin-top: 15rem;
+
+      .lineDivision {
+        width: 100vw;
+        height: auto;
+        margin-top: 5rem;
+      }
+
+      .title {
+        margin-bottom: 5rem;
+      }
+
+      .bagagesImage {
+        width: 30vw;
+        height: auto;
+        margin-bottom: 8rem;
+      }
+
+      .button {
+        font-size: 1.5rem;
+        width: 20vw;
+        margin-bottom: 3rem;
+      }
+
+      .span {
+        font-size: 1.5rem;
       }
     }
   }

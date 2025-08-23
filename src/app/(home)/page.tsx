@@ -22,6 +22,7 @@ import presents from "../../public/imgs/presents.png";
 import forest from "../../public/imgs/forest.png";
 import mirror_and_cosmetics from "../../public/imgs/mirror_and_cosmetics.png";
 import wine_and_pasta from "../../public/imgs/wine_and_pasta.png";
+import heart from "../../public/imgs/heart.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 import { routerServerGlobal } from "next/dist/server/lib/router-utils/router-server-context";
@@ -80,7 +81,7 @@ export default function Home() {
         <section className={`${styles.nameDateSection} ${styles.column}`}>
           <Image src={wedding_names} alt="" className={styles.weddingNames} />
           <span className={styles.datesSpan}>
-            26 a 29 de maio de 2026 <br /> podere lamone & lamino
+            26 A 29 DE MAIO DE 2026 <br /> LOCAL: PODERE LAMONE & LAMINO
           </span>
         </section>
 
@@ -119,95 +120,118 @@ export default function Home() {
               Com carinho,
               <br /> Amanda & Filippo
             </span>
+            <Image src={heart} alt="" className={styles.heartImage} />
           </div>
         </section>
 
         <section className={`${styles.countdownSection} ${styles.column}`}>
+          <span className={`${styles.textSpan} ${styles.title}`}>Faltam</span>
           <Image src={minor_banner} alt="" className={styles.minorBanner} />
-          <span className={styles.textSpan}>Faltam</span>
           <Image src={motorcycle} alt="" className={styles.motorcycle} />
           <Image src={major_banner} alt="" className={styles.majorBanner} />
           <div className={styles.countdownDiv}>
-            <span className={styles.countdownSpan}>
-              <span className={styles.numbers}>00</span>
-              <span className={styles.text}>DIAS</span>
-            </span>
-            <div className={styles.division}>:</div>
-            <span className={styles.countdownSpan}>
-              <span className={`${styles.numbers} ${styles.middleNumber}`}>
-                00
-              </span>
-              <span className={styles.text}>HORAS</span>
-            </span>
-            <div className={styles.division}>:</div>
-            <span className={styles.countdownSpan}>
-              <span className={styles.numbers}>00</span>
-              <span className={styles.text}>MINUTOS</span>
-            </span>
+            <span className={styles.countdownSpanNumbers}>00</span>
+            <span className={styles.countdownSpanNumbers}>:</span>
+            <span className={styles.countdownSpanNumbers}>00</span>
+            <span className={styles.countdownSpanNumbers}>:</span>
+            <span className={styles.countdownSpanNumbers}>00</span>
+          </div>
+          <div className={styles.countdownDiv}>
+            <span className={styles.countdownSpanText}>DIAS</span>
+            <span className={styles.countdownSpanText}>HORAS</span>
+            <span className={styles.countdownSpanText}>MINUTOS</span>
           </div>
         </section>
 
         <section id="schedule" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
-            <span className={styles.title}>Programação</span>
+            <span className={styles.title}>
+              <span className={styles.capitalLetter}>P</span>rogramação
+            </span>
             <div className={styles.infoDiv}>
               <div className={styles.infoSpans}>
-                <span className={styles.headerSpan}>Welcome dinner</span>
-                <span className={styles.dateSpan}>26 MAIO DE 2026</span>
-                <span className={styles.hourSpan}>18h30</span>
-                <a
-                  target="_blank"
-                  className={styles.textLink}
-                  href="https://www.google.com/maps/place/Podere+Lamino/@43.057809,11.6990681,606m/data=!3m1!1e3!4m9!3m8!1s0x1329678b4265f597:0xa7cbc14effabb1d4!5m2!4m1!1i2!8m2!3d43.057809!4d11.701643!16s%2Fg%2F1td8mqr_?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
-                >
-                  PODERE LAMONE LAMINO
-                </a>
-                <a
-                  target="_blank"
-                  className={styles.textLink}
-                  href="https://br.pinterest.com/amanklug/outfits-welcome-dinner"
-                >
-                  TRAJE: ESPORTE FINO
-                </a>
+                <div>
+                  <span className={styles.headerSpan}>Welcome dinner</span>
+                  <span className={styles.dateSpan}>26 MAIO DE 2026</span>
+                </div>
+                <div>
+                  <span className={styles.hourSpan}>19h</span>
+                </div>
+                <div>
+                  <a
+                    target="_blank"
+                    className={styles.textLink}
+                    href="https://www.google.com/maps/place/Podere+Lamino/@43.057809,11.6990681,606m/data=!3m1!1e3!4m9!3m8!1s0x1329678b4265f597:0xa7cbc14effabb1d4!5m2!4m1!1i2!8m2!3d43.057809!4d11.701643!16s%2Fg%2F1td8mqr_?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+                  >
+                    PODERE LAMONE LAMINO
+                  </a>
+                  <a
+                    target="_blank"
+                    className={styles.textLink}
+                    href="https://br.pinterest.com/amanklug/outfits-welcome-dinner"
+                  >
+                    TRAJE: ESPORTE FINO
+                  </a>
+                </div>
               </div>
-              <Image src={pizza} alt="" className={styles.sideImage} />
+              <Image
+                src={pizza}
+                alt=""
+                className={`${styles.sideImage} ${styles.pizza}`}
+              />
             </div>
             <div className={styles.infoDiv}>
               <Image src={grapes} alt="" className={styles.sideImage} />
               <div className={styles.infoSpans}>
-                <span className={styles.headerSpan}>Agriturismo</span>
-                <span className={styles.dateSpan}>27 MAIO DE 2026</span>
-                <span className={styles.hourSpan}>10h00</span>
-                <a
-                  className={styles.textLink}
-                  onClick={(e) => handleClick(e, "/agriturism")}
-                >
-                  SAIBA MAIS
-                </a>
+                <div>
+                  <span className={styles.headerSpan}>Agriturismo</span>
+                  <span className={styles.dateSpan}>27 MAIO DE 2026</span>
+                </div>
+                <div>
+                  <span className={styles.hourSpan}>10h</span>
+                </div>
+                <div>
+                  <a
+                    className={styles.textLink}
+                    onClick={(e) => handleClick(e, "/agriturism")}
+                  >
+                    SAIBA MAIS
+                  </a>
+                </div>
               </div>
             </div>
             <div className={styles.infoDiv}>
               <div className={styles.infoSpans}>
-                <span className={styles.headerSpan}>Casamento</span>
-                <span className={styles.dateSpan}>28 MAIO DE 2026</span>
-                <span className={styles.hourSpan}>17h00</span>
-                <a
-                  target="_blank"
-                  className={styles.textLink}
-                  href="https://www.google.com/maps/place/Podere+Lamino/@43.057809,11.6990681,606m/data=!3m1!1e3!4m9!3m8!1s0x1329678b4265f597:0xa7cbc14effabb1d4!5m2!4m1!1i2!8m2!3d43.057809!4d11.701643!16s%2Fg%2F1td8mqr_?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
-                >
-                  PODERE LAMONE LAMINO
-                </a>
-                <a
-                  target="_blank"
-                  className={styles.textLink}
-                  href="https://br.pinterest.com/amanklug/outfits-wedding-day"
-                >
-                  TRAJE: SOCIAL COMPLETO
-                </a>
+                <div>
+                  <span className={styles.headerSpan}>Casamento</span>
+                  <span className={styles.dateSpan}>28 MAIO DE 2026</span>
+                </div>
+                <div>
+                  <span className={styles.hourSpan}>17h</span>
+                </div>
+                <div>
+                  <a
+                    target="_blank"
+                    className={styles.textLink}
+                    href="https://www.google.com/maps/place/Podere+Lamino/@43.057809,11.6990681,606m/data=!3m1!1e3!4m9!3m8!1s0x1329678b4265f597:0xa7cbc14effabb1d4!5m2!4m1!1i2!8m2!3d43.057809!4d11.701643!16s%2Fg%2F1td8mqr_?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D"
+                  >
+                    PODERE LAMONE LAMINO
+                  </a>
+                  <a
+                    target="_blank"
+                    className={styles.textLink}
+                    href="https://br.pinterest.com/amanklug/outfits-wedding-day"
+                  >
+                    TRAJE: SOCIAL COMPLETO
+                  </a>
+                </div>
               </div>
-              <Image src={wedding_rings} alt="" className={styles.sideImage} />
+              <Image
+                src={wedding_rings}
+                alt=""
+                className={`${styles.sideImage} ${styles.weddingRings}`}
+              />
             </div>
           </div>
         </section>
@@ -217,7 +241,9 @@ export default function Home() {
           className={`${styles.travelingSection} ${styles.column}`}
         >
           <header className={`${styles.header} ${styles.column}`}>
-            <span className={styles.title}>Como Chegar</span>
+            <span className={styles.title}>
+              <span className={styles.capitalLetter}>C</span>omo chegar
+            </span>
             <Image src={plane} alt="" className={styles.planeImage} />
           </header>
           <p className={`${styles.paragraph} ${styles.column}`}>
@@ -235,9 +261,7 @@ export default function Home() {
               A maneira mais prática e confortável de chegar até a região é
               alugar um carro, tanto em Roma quanto em Florença. Assim, vocês
               terão mobilidade para explorar as cidades vizinhas, os vinhedos e
-              as paisagens incríveis da Toscana.
-            </span>
-            <span className={styles.textSpan}>
+              as paisagens incríveis da Toscana. <br />
               As estradas são bem sinalizadas, seguras e com paisagens de tirar
               o fôlego ao longo do caminho.
             </span>
@@ -255,14 +279,11 @@ export default function Home() {
             <span className={styles.textSpan}>
               Recomendamos a compra das passagens aéreas com antecedência, tanto
               para garantir melhores tarifas quanto para ter mais opções de voos
-              e conexões.
-            </span>
-            <span className={styles.textSpan}>
-              Para quem deseja praticidade, indicamos a Agência MHM, que está
-              nos auxiliando em toda a organização da viagem. Eles oferecem
-              suporte na emissão das passagens, na escolha dos melhores trajetos
-              e também no aluguel de carro, tornando todo o processo mais
-              simples e confortável.
+              e conexões. <br /> Para quem deseja praticidade, indicamos a
+              Agência MHM, que está nos auxiliando em toda a organização da
+              viagem. Eles oferecem suporte na emissão das passagens, na escolha
+              dos melhores trajetos e também no aluguel de carro, tornando todo
+              o processo mais simples e confortável.
             </span>
           </p>
           <button
@@ -283,7 +304,9 @@ export default function Home() {
           className={`${styles.housingSection} ${styles.column}`}
         >
           <Image src={line_division} alt="" className={styles.lineDivision} />
-          <span className={styles.title}>Hospedagem</span>
+          <span className={styles.title}>
+            <span className={styles.capitalLetter}>H</span>ospedagem
+          </span>
           <Image src={bagages} alt="" className={styles.bagagesImage} />
           <button
             className={styles.button}
@@ -299,13 +322,15 @@ export default function Home() {
         <section id="recommendations" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
-            <span className={styles.title}>Recomendações</span>
+            <span className={styles.title}>
+              <span className={styles.capitalLetter}>R</span>ecomendações
+            </span>
             <div className={styles.moreDiv}>
               <a
                 className={styles.span}
                 onClick={(e) => handleClick(e, "/recommendations")}
               >
-                o que fazer na região
+                O QUE FAZER NA REGIÃO
               </a>
               <Image src={forest} alt="" className={styles.image} />
             </div>
@@ -315,7 +340,7 @@ export default function Home() {
                 className={styles.span}
                 href="https://www.villaapparita.it/i/blog/la-val-d-orcia-da-gustare/128"
               >
-                Gastronomia Típica
+                GASTRONOMIA TÍPICA
               </a>
               <Image src={wine_and_pasta} alt="" className={styles.image} />
             </div>
@@ -324,7 +349,7 @@ export default function Home() {
                 className={styles.span}
                 onClick={(e) => handleClick(e, "/hair_and_makeup")}
               >
-                cabelo e maquiagem
+                CABELO E MAQUIAGEM
               </a>
               <Image
                 src={mirror_and_cosmetics}
@@ -353,14 +378,47 @@ export default function Home() {
 
         <section id="confirmation" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
-          <form action="" className={`${styles.frameForm} ${styles.column}`}>
+          <form
+            method="POST"
+            action="mailto:henriqueklug@gmail.com?subject=subject&body=body'"
+            className={`${styles.frameForm} ${styles.column}`}
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
             <fieldset className={`${styles.fieldset} ${styles.column}`}>
-              <legend className={styles.title}>Confirmar Presença</legend>
-              <input type="text" placeholder="NOME COMPLETO*" />
-              <input type="text" placeholder="NOME ACOMPANHENTE" />
-              <input type="text" placeholder="TELEFONE COM DDD*" />
+              <legend className={styles.title}>
+                <span className={styles.capitalLetter}>C</span>onfirmar presença
+              </legend>
+              <input
+                name="guest"
+                type="text"
+                required
+                placeholder="CONVIDADO NOME COMPLETO (obrigatorio)"
+              />
+              <label className={styles.optionalLabel} htmlFor="family">
+                <input
+                  id="family"
+                  name="family"
+                  type="text"
+                  placeholder="FAMILIARES NOME COMPLETO (se houver)"
+                />
+                *Somente nomes presentes no convite
+              </label>
+              <input name="email" type="text" required placeholder="EMAIL*" />
+              <input
+                name="phone"
+                type="text"
+                required
+                placeholder="TELEFONE COM DDD*"
+              />
               <input type="text" placeholder="LOCAL DE HOSPEDAGEM" />
-              <input type="text" placeholder="ALGUMA RESTRIÇÃO ALIMENTAS?" />
+              <input
+                name="food_restriction"
+                type="text"
+                required
+                placeholder="ALGUMA RESTRIÇÃO ALIMENTAR?*"
+              />
               <div className={styles.div}>
                 <span>CONFIRMO PRESENÇA EM:</span>
                 <label htmlFor="welcome_dinner">
@@ -425,9 +483,11 @@ export default function Home() {
 
         <section
           id="gifts"
-          className={`${styles.housingSection} ${styles.column}`}
+          className={`${styles.giftsSection} ${styles.column}`}
         >
-          <span className={styles.title}>Presentes</span>
+          <span className={styles.title}>
+            <span className={styles.capitalLetter}>P</span>resentes
+          </span>
           <Image src={presents} alt="" className={styles.bagagesImage} />
           <button
             className={styles.button}
