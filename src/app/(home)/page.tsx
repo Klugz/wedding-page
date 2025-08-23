@@ -292,6 +292,64 @@ export default function Home() {
               <input type="text" placeholder="TELEFONE COM DDD*" />
               <input type="text" placeholder="LOCAL DE HOSPEDAGEM" />
               <input type="text" placeholder="ALGUMA RESTRIÇÃO ALIMENTAS?" />
+              <div className={styles.div}>
+                <span>CONFIRMO PRESENÇA EM:</span>
+                <label htmlFor="welcome_dinner">
+                  <input
+                    id="welcome_dinner"
+                    name="welcome_dinner"
+                    type="checkbox"
+                    className={styles.checkbox}
+                  />
+                  WELCOME DINNER
+                </label>
+                <label htmlFor="agriturismo">
+                  <input
+                    id="agriturismo"
+                    name="agriturismo"
+                    type="checkbox"
+                    className={styles.checkbox}
+                  />
+                  AGRITURISMO
+                </label>
+                <label htmlFor="casamento">
+                  <input
+                    id="casamento"
+                    name="casamento"
+                    type="checkbox"
+                    className={styles.checkbox}
+                  />
+                  CASAMENTO
+                </label>
+                <label htmlFor="welcome_dinner_marriage">
+                  <input
+                    id="welcome_dinner_marriage"
+                    name="welcome_dinner_marriage"
+                    type="checkbox"
+                    className={styles.checkbox}
+                  />
+                  WELCOME DINNER e CASAMENTO
+                </label>
+                <label htmlFor="welcome_dinner_marriage_agriturism">
+                  <input
+                    id="welcome_dinner_marriage_agriturism"
+                    name="welcome_dinner_marriage_agriturism"
+                    type="checkbox"
+                    className={styles.checkbox}
+                  />
+                  WELCOME DINNER, AGRITURISMO e CASAMENTO
+                </label>
+                <label htmlFor="cant_come">
+                  <input
+                    id="cant_come"
+                    name="cant_come"
+                    type="checkbox"
+                    className={styles.checkbox}
+                  />
+                  INFELIZMENTE NÃO PODEREI COMPARECER
+                </label>
+              </div>
+              <button className={styles.button}>ENVIAR</button>
             </fieldset>
           </form>
         </section>
