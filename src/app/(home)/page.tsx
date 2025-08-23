@@ -15,6 +15,7 @@ import wedding_rings from "../../public/imgs/wedding_rings.png";
 import plane from "../../public/imgs/plane.png";
 import line_division from "../../public/imgs/line_division.png";
 import bagages from "../../public/imgs/bagages.png";
+import presents from "../../public/imgs/presents.png";
 import forest from "../../public/imgs/forest.png";
 import mirror_and_cosmetics from "../../public/imgs/mirror_and_cosmetics.png";
 import wine_and_pasta from "../../public/imgs/wine_and_pasta.png";
@@ -353,7 +354,20 @@ export default function Home() {
             </fieldset>
           </form>
         </section>
+
+        <section
+          id="presents"
+          className={`${styles.housingSection} ${styles.column}`}
+        >
+          <span className={styles.title}>Presentes</span>
+          <Image src={presents} alt="" className={styles.bagagesImage} />
+          <button className={styles.button}>CLIQUE AQUI</button>
+          <Image src={line_division} alt="" className={styles.lineDivision} />
+        </section>
       </main>
+      <footer>
+        <span>SITE DESENVOLVIDO POR HENRIQUE KLUG</span>
+      </footer>
     </div>
   );
 }
