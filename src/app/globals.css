@@ -88,6 +88,18 @@
 /* Desktop and above */
 @media (min-width: 1440px) {
   html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 1700px) {
+  html {
     font-size: 100%;
   }
 }
