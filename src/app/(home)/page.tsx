@@ -39,7 +39,7 @@ export default function Home() {
     <div className={styles.container}>
       <header className={`${styles.header} ${styles.column}`}>
         <Image src={af_logo} alt="" className={styles.image} />
-        <Image src={double_tulips} alt="" className={styles.topRightImage} />
+        {/* <Image src={double_tulips} alt="" className={styles.topRightImage} /> */}
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
             <a className={styles.item} href="#">

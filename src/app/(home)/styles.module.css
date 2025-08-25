@@ -33,7 +33,6 @@
 
 .container {
   width: 100vw;
-  overflow-x: hidden;
   color: var(--text-color);
   background: url("../../public/imgs/paper_background.jpg");
   background-size: contain;
