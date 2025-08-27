@@ -18,37 +18,24 @@
   }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 375px) {
   html {
     font-size: 16%;
   }
-}
-
-@media (min-width: 375px) {
-  /* iPhone SE / iPhone 12 mini */
-  html {
-    font-size: 18%;
-  }
-}
-
-@media (min-width: 375px) {
-  html {
-    font-size: 18%;
-  }
-} /* iPhone SE/12 mini */
+} /* iPhone SE/mini */
 @media (min-width: 390px) {
   html {
-    font-size: 19%;
+    font-size: 17%;
   }
 } /* iPhone 13/14 Pro */
 @media (min-width: 414px) {
   html {
-    font-size: 20%;
+    font-size: 18%;
   }
 } /* iPhone 11/12/14/15 */
 @media (min-width: 430px) {
   html {
-    font-size: 21%;
+    font-size: 19%;
   }
 } /* iPhone 15 Pro Max */
 
@@ -103,8 +90,8 @@
 }
 
 html {
-  -webkit-text-size-adjust: 100%; /* Prevent Safari from auto-resizing text */
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: none; /* stop iOS from scaling text */
+  text-size-adjust: none;
 }
 
 html,
