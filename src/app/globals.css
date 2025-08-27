@@ -14,37 +14,7 @@
 /* Mobile sizes */
 @media (min-width: 0px) {
   html {
-    font-size: 5%;
-  }
-}
-
-@media (min-width: 120px) {
-  html {
-    font-size: 6%;
-  }
-}
-
-@media (min-width: 140px) {
-  html {
-    font-size: 8%;
-  }
-}
-
-@media (min-width: 180px) {
-  html {
-    font-size: 10%;
-  }
-}
-
-@media (min-width: 220px) {
-  html {
     font-size: 12%;
-  }
-}
-
-@media (min-width: 270px) {
-  html {
-    font-size: 14%;
   }
 }
 
@@ -54,15 +24,17 @@
   }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 375px) {
+  /* iPhone SE / iPhone 12 mini */
   html {
-    font-size: 18.5%;
+    font-size: 18%;
   }
 }
 
-@media (min-width: 420px) {
+@media (min-width: 414px) {
+  /* iPhone XR / iPhone 11 / iPhone 13/14 */
   html {
-    font-size: 20.5%;
+    font-size: 20%;
   }
 }
 
@@ -72,64 +44,28 @@
   }
 }
 
-@media (min-width: 540px) {
-  html {
-    font-size: 25%;
-  }
-}
-
 @media (min-width: 600px) {
   html {
     font-size: 28%;
   }
 }
 
-@media (min-width: 660px) {
-  html {
-    font-size: 29%;
-  }
-}
-
 @media (min-width: 720px) {
   html {
-    font-size: 30%;
+    font-size: 32%;
   }
 }
 
 /* Tablet → small laptop */
-@media (min-width: 800px) {
-  html {
-    font-size: 34%;
-  }
-}
-
-@media (min-width: 900px) {
-  html {
-    font-size: 37%;
-  }
-}
-
 @media (min-width: 960px) {
   html {
-    font-size: 40%;
-  }
-}
-
-@media (min-width: 1080px) {
-  html {
-    font-size: 47%;
+    font-size: 45%;
   }
 }
 
 @media (min-width: 1200px) {
   html {
-    font-size: 55%;
-  }
-}
-
-@media (min-width: 1320px) {
-  html {
-    font-size: 65%;
+    font-size: 60%;
   }
 }
 
@@ -140,21 +76,9 @@
   }
 }
 
-@media (min-width: 1520px) {
-  html {
-    font-size: 82%;
-  }
-}
-
 @media (min-width: 1600px) {
   html {
     font-size: 90%;
-  }
-}
-
-@media (min-width: 1700px) {
-  html {
-    font-size: 95%;
   }
 }
 
