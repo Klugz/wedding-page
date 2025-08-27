@@ -198,6 +198,7 @@
           }
 
           input::placeholder {
+            font-size: 1.2rem;
             color: #a3a58b;
           }
         }
