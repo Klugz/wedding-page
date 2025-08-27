@@ -31,12 +31,26 @@
   }
 }
 
+@media (min-width: 375px) {
+  html {
+    font-size: 18%;
+  }
+} /* iPhone SE/12 mini */
+@media (min-width: 390px) {
+  html {
+    font-size: 19%;
+  }
+} /* iPhone 13/14 Pro */
 @media (min-width: 414px) {
-  /* iPhone XR / iPhone 11 / iPhone 13/14 */
   html {
     font-size: 20%;
   }
-}
+} /* iPhone 11/12/14/15 */
+@media (min-width: 430px) {
+  html {
+    font-size: 21%;
+  }
+} /* iPhone 15 Pro Max */
 
 @media (min-width: 480px) {
   html {
