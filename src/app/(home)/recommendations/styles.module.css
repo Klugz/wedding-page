@@ -10,10 +10,10 @@
   align-items: center;
   height: 100%;
   top: 30rem;
-  width: 60vw !important;
+  max-width: 60vw !important;
 
   .trailImage {
-    width: 25vw;
+    max-width: 25vw;
     margin-bottom: 5rem;
   }
 
