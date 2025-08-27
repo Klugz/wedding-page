@@ -32,13 +32,14 @@
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
   color: var(--text-color);
   background: url("../../public/imgs/paper_background.jpg");
   background-size: contain;
 
   .header {
-    margin-top: 4.25rem;
+    padding-top: 5rem;
     gap: 5rem;
 
     .topRightImage {
