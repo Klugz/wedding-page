@@ -48,9 +48,21 @@
   }
 }
 
+@media (min-width: 320px) {
+  html {
+    font-size: 16%;
+  }
+}
+
 @media (min-width: 360px) {
   html {
     font-size: 18.5%;
+  }
+}
+
+@media (min-width: 420px) {
+  html {
+    font-size: 20.5%;
   }
 }
 
@@ -60,9 +72,21 @@
   }
 }
 
+@media (min-width: 540px) {
+  html {
+    font-size: 25%;
+  }
+}
+
 @media (min-width: 600px) {
   html {
     font-size: 28%;
+  }
+}
+
+@media (min-width: 660px) {
+  html {
+    font-size: 29%;
   }
 }
 
@@ -73,15 +97,39 @@
 }
 
 /* Tablet → small laptop */
+@media (min-width: 800px) {
+  html {
+    font-size: 34%;
+  }
+}
+
+@media (min-width: 900px) {
+  html {
+    font-size: 37%;
+  }
+}
+
 @media (min-width: 960px) {
   html {
     font-size: 40%;
   }
 }
 
+@media (min-width: 1080px) {
+  html {
+    font-size: 47%;
+  }
+}
+
 @media (min-width: 1200px) {
   html {
     font-size: 55%;
+  }
+}
+
+@media (min-width: 1320px) {
+  html {
+    font-size: 65%;
   }
 }
 
@@ -92,6 +140,12 @@
   }
 }
 
+@media (min-width: 1520px) {
+  html {
+    font-size: 82%;
+  }
+}
+
 @media (min-width: 1600px) {
   html {
     font-size: 90%;
@@ -99,6 +153,12 @@
 }
 
 @media (min-width: 1700px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (min-width: 1800px) {
   html {
     font-size: 100%;
   }
