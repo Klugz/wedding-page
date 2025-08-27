@@ -1,11 +1,14 @@
 import { libreBaskerville } from "../styles/fonts/fonts";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import "./globals.css";
 
 // const libertinusMono = Libertinus_Mono({ weight: ["400"], subsets: ['latin'] });
 
-export const metadata: Metadata = {
-  viewport: "width=device-width, initial-scale=1.0",
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1, // optional
+  userScalable: false, // optional
 };
 
 export default function RootLayout({
