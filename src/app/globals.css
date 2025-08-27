@@ -24,7 +24,7 @@
 } /* iPhone SE/mini */
 @media (min-width: 390px) {
   html {
-    font-size: 21%;
+    font-size: 10%;
   }
 } /* iPhone 13/14 Pro */
 @media (min-width: 414px) {
