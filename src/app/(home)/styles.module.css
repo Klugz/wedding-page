@@ -112,6 +112,11 @@
         height: auto;
       }
 
+      .frameImageForm {
+        width: 82vw;
+        height: auto;
+      }
+
       .frameForm {
         position: absolute;
         font-family: "Libre Baskerville";

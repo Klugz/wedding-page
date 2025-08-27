@@ -377,7 +377,7 @@ export default function Home() {
         </section>
 
         <section id="confirmation" className={styles.frameSection}>
-          <Image src={frame_1} alt="" className={styles.frameImage} />
+          <Image src={frame_1} alt="" className={styles.frameImageForm} />
           <form
             method="POST"
             action="mailto:henriqueklug@gmail.com?subject=subject&body=body'"
