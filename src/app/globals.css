@@ -47,6 +47,24 @@
   }
 } /* iPhone 11/12/14/15 */
 
+@media (min-width: 420px) {
+  html {
+    font-size: 23.5%;
+  }
+}
+
+@media (min-width: 440px) {
+  html {
+    font-size: 24%;
+  }
+}
+
+@media (min-width: 460px) {
+  html {
+    font-size: 25.5%;
+  }
+}
+
 @media (min-width: 480px) {
   html {
     font-size: 26.5%;
