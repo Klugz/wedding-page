@@ -1,3 +1,9 @@
+@media (max-width: 620px) {
+  .container {
+    height: 100vh !important;
+  }
+}
+
 .frameImage {
   width: 90vw !important;
   height: auto;

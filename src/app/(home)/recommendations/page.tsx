@@ -7,7 +7,7 @@ import forest from "../../../public/imgs/forest.png";
 
 export default function Recommendations() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
         <section className={`${styles.frameSection}`}>
           <Image

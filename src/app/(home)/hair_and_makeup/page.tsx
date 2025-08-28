@@ -7,7 +7,7 @@ import mirror_and_cosmetics from "../../../public/imgs/mirror_and_cosmetics.png"
 
 export default function HairAndMakeup() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
         <section className={styles.frameSection}>
           <Image

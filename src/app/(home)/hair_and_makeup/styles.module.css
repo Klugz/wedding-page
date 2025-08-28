@@ -1,3 +1,9 @@
+@media (max-width: 720px) {
+  .container {
+    height: 100vh !important;
+  }
+}
+
 .hairAndMakeupSection {
   display: flex;
   flex-direction: column;
