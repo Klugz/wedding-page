@@ -32,22 +32,36 @@ export default function HairAndMakeup() {
             </p>
             <ul className={local_styles.workersList}>
               <li>
-                <a href="https://www.instagram.com/yanna_farias">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/yanna_farias"
+                >
                   Yanna Farias
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/beautyonfleek.it">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/beautyonfleek.it"
+                >
                   Isabela de oliveira
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/makeupflorence">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/makeupflorence"
+                >
                   Ana Matanovic
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/suely_hair_makeup">Suely</a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/suely_hair_makeup"
+                >
+                  Suely
+                </a>
               </li>
             </ul>
             <p>
