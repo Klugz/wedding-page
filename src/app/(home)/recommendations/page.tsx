@@ -105,6 +105,15 @@ export default function Recommendations() {
                 </a>
               </li>
             </ul>
+            <p>
+              <strong>
+                obs: Clique nas palavras em destaque para saber mais.
+              </strong>
+              Ao clicar, você será redirecionado(a) para uma página com mais
+              informações. Caso ela esteja em italiano, basta clicar nos três
+              pontinhos no canto superior direito do navegador e selecionar
+              “Traduzir para o português”.
+            </p>
           </div>
         </section>
       </main>

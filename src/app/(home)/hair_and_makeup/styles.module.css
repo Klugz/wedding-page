@@ -1,9 +1,4 @@
-.frameImage {
-  width: 90vw !important;
-  height: auto;
-}
-
-.recommendationsSection {
+.hairAndMakeupSection {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,24 +7,25 @@
   top: 30rem;
   max-width: 60vw !important;
 
+  .mirrorImage {
+    max-width: 25vw;
+    margin-bottom: 5rem;
+  }
+
   p {
     font-size: 1.5rem;
     width: 40vw;
     text-align: center;
   }
 
-  .trailImage {
-    max-width: 25vw;
-    margin-bottom: 5rem;
-  }
-
-  .recommendationsList {
+  .workersList {
     list-style: none;
     text-align: center;
+    margin-bottom: 5rem;
 
     li {
       font-size: 1.5rem;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
       a {
         text-decoration: underline;
       }
