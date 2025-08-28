@@ -23,9 +23,15 @@
   }
 }
 
+@media (min-width: 340px) {
+  html {
+    font-size: 18%;
+  }
+}
+
 @media (min-width: 360px) {
   html {
-    font-size: 20.5%;
+    font-size: 18.5%;
   }
 } /* iPhone SE/mini */
 
