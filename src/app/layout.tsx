@@ -1,5 +1,4 @@
-import { libreBaskerville } from "../styles/fonts/fonts";
-import { Metadata, Viewport } from "next";
+import { libreBaskerville, amsterdamThreeSlant } from "../styles/fonts/fonts";
 import "./globals.css";
 
 // const libertinusMono = Libertinus_Mono({ weight: ["400"], subsets: ['latin'] });
@@ -11,7 +10,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${libreBaskerville.className}`}>{children}</body>
+      <body
+        className={`${libreBaskerville.className} ${amsterdamThreeSlant.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

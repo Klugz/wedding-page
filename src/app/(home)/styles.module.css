@@ -15,8 +15,9 @@
   font-family: "Alex Brush";
 
   .capitalLetter {
-    font-size: 10rem;
-    font-family: "Allura";
+    font-size: 4rem;
+    font-style: italic;
+    font-family: var(--font-amsterdam);
   }
 }
 
