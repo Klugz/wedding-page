@@ -159,7 +159,9 @@ export default function Home() {
         </section>
 
         <section className={`${styles.countdownSection} ${styles.column}`}>
-          <span className={`${styles.textSpan} ${styles.title}`}>Faltam</span>
+          <span className={`${styles.textSpan} ${styles.title}`}>
+            <span className={styles.capitalLetter}>F</span>altam
+          </span>
           <Image src={minor_banner} alt="" className={styles.minorBanner} />
           <Image src={motorcycle} alt="" className={styles.motorcycle} />
           <Image src={major_banner} alt="" className={styles.majorBanner} />
