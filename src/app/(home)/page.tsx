@@ -3,6 +3,7 @@
 import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";
@@ -29,6 +30,39 @@ import { routerServerGlobal } from "next/dist/server/lib/router-utils/router-ser
 
 export default function Home() {
   const router = useRouter();
+  const targetDate = new Date(2026, 4, 26, 0, 0, 0);
+  // Months in JS are 0-indexed (4 = May)
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        clearInterval(interval);
+        setTimeLeft({ days: "00", hours: "00", minutes: "00" });
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / (1000 * 60)) % 60);
+
+      setTimeLeft({
+        days: String(days).padStart(2, "0"),
+        hours: String(hours).padStart(2, "0"),
+        minutes: String(minutes).padStart(2, "0"),
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleClick = (e: React.MouseEvent, route: string) => {
     e.preventDefault();
@@ -130,11 +164,15 @@ export default function Home() {
           <Image src={motorcycle} alt="" className={styles.motorcycle} />
           <Image src={major_banner} alt="" className={styles.majorBanner} />
           <div className={styles.countdownDiv}>
-            <span className={styles.countdownSpanNumbers}>00</span>
+            <span className={styles.countdownSpanNumbers}>{timeLeft.days}</span>
             <span className={styles.countdownSpanNumbers}>:</span>
-            <span className={styles.countdownSpanNumbers}>00</span>
+            <span className={styles.countdownSpanNumbers}>
+              {timeLeft.hours}
+            </span>
             <span className={styles.countdownSpanNumbers}>:</span>
-            <span className={styles.countdownSpanNumbers}>00</span>
+            <span className={styles.countdownSpanNumbers}>
+              {timeLeft.minutes}
+            </span>
           </div>
           <div className={styles.countdownDiv}>
             <span className={styles.countdownSpanText}>DIAS</span>
