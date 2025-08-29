@@ -1,0 +1,59 @@
+@media (max-width: 720px) {
+  .container {
+    height: 100vh !important;
+  }
+}
+
+.frameImage {
+  width: 80vw;
+  height: auto;
+}
+
+.giftsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  top: 50rem;
+  max-width: 60vw !important;
+
+  .title {
+    font-size: 8rem;
+    margin-bottom: 5rem;
+  }
+
+  .giftImage {
+    max-width: 32vw;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    width: 50vw;
+    text-align: center;
+  }
+
+  .workersList {
+    list-style: none;
+    text-align: center;
+    margin-bottom: 5rem;
+
+    li {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    li:hover {
+      color: #a3a58b;
+    }
+  }
+}
