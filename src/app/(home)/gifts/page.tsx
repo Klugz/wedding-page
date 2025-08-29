@@ -7,7 +7,7 @@ import presents from "../../../public/imgs/presents.png";
 
 export default function Gifts() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
         <section
           className={`${styles.frameSection} ${local_styles.giftsSection}`}
