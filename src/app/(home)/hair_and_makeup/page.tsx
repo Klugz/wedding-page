@@ -36,7 +36,7 @@ export default function HairAndMakeup() {
                   target="_blank"
                   href="https://www.instagram.com/yanna_farias"
                 >
-                  Yanna Farias
+                  YANNA FARIAS
                 </a>
               </li>
               <li>
@@ -44,7 +44,7 @@ export default function HairAndMakeup() {
                   target="_blank"
                   href="https://www.instagram.com/beautyonfleek.it"
                 >
-                  Isabela de oliveira
+                  ISABELA DE OLIVEIRA
                 </a>
               </li>
               <li>
@@ -52,7 +52,7 @@ export default function HairAndMakeup() {
                   target="_blank"
                   href="https://www.instagram.com/makeupflorence"
                 >
-                  Ana Matanovic
+                  ANA MATANOVIC
                 </a>
               </li>
               <li>
@@ -60,7 +60,7 @@ export default function HairAndMakeup() {
                   target="_blank"
                   href="https://www.instagram.com/suely_hair_makeup"
                 >
-                  Suely
+                  SUELY
                 </a>
               </li>
             </ul>
