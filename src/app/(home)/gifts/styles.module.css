@@ -2,14 +2,24 @@
   .container {
     height: 100vh !important;
   }
+
+  .giftsSection {
+    width: 100vw !important;
+    height: 100vh !important;
+
+    .frameContent {
+      top: 75rem !important;
+    }
+  }
 }
 
 .frameImage {
-  width: 80vw;
+  width: 100vw !important;
   height: auto;
 }
 
 .giftsSection {
+  margin-top: 0 !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -18,9 +28,22 @@
   top: 50rem;
   max-width: 60vw !important;
 
+  .frameContent {
+    top: 25rem;
+  }
+
   .title {
-    font-size: 8rem;
-    margin-bottom: 5rem;
+    padding-left: 5rem;
+    font-size: 10rem;
+
+    .capitalLetter {
+      position: absolute;
+      top: -4rem;
+      left: 16rem;
+      font-size: 5.5rem;
+      font-style: italic;
+      font-family: var(--font-amsterdam);
+    }
   }
 
   .giftImage {
@@ -29,31 +52,18 @@
     margin-bottom: 5rem;
   }
 
+  .qrCodeImage {
+    max-width: 25vw;
+    height: auto;
+  }
+
   span {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     width: 50vw;
     text-align: center;
-  }
-
-  .workersList {
-    list-style: none;
-    text-align: center;
-    margin-bottom: 5rem;
-
-    li {
-      font-size: 1.5rem;
-      margin-bottom: 3rem;
-      a {
-        text-decoration: underline;
-      }
-    }
-
-    li:hover {
-      color: #a3a58b;
-    }
   }
 }

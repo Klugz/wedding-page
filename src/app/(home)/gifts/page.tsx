@@ -4,6 +4,7 @@ import local_styles from "./styles.module.css";
 
 import frame_2 from "../../../public/imgs/frame_2.png";
 import presents from "../../../public/imgs/presents.png";
+import qr_code from "../../../public/imgs/qr_code.png";
 
 export default function Gifts() {
   return (
@@ -13,12 +14,11 @@ export default function Gifts() {
           className={`${styles.frameSection} ${local_styles.giftsSection}`}
         >
           <Image src={frame_2} alt="" className={local_styles.frameImage} />
-          <div className={styles.frameText}>
+          <div className={`${styles.frameText} ${local_styles.frameContent}`}>
             <span className={`${styles.title} ${local_styles.title}`}>
-              Presentes
+              <span className={local_styles.capitalLetter}>P</span>resentes
             </span>
             <Image src={presents} alt="" className={local_styles.giftImage} />
-            <span>Para nossos queridos convidados brasileiros,</span>
             <p>
               Sabemos que viajar até a Itália representa um investimento
               importante, e valorizamos profundamente o esforço e o carinho de
@@ -32,6 +32,7 @@ export default function Gifts() {
               recebido com carinho e gratidão.
             </p>
             <span>CHAVE PIX: CPF AMANDA KLUG - 068.971.099-24</span>
+            {/* <Image src={qr_code} alt="" className={local_styles.qrCodeImage} /> */}
           </div>
         </section>
       </main>

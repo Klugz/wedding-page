@@ -2,9 +2,19 @@
   .container {
     height: 100vh !important;
   }
+
+  .hairAndMakeupSection {
+    width: 100vw !important;
+  }
+}
+
+.frameImage {
+  width: 90vw !important;
+  height: auto;
 }
 
 .hairAndMakeupSection {
+  margin-top: 0 !important;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

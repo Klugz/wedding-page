@@ -12,10 +12,10 @@ export default function Housing() {
         <section
           className={`${styles.frameSection} ${local_styles.housingSection}`}
         >
-          <Image src={frame_2} alt="" className={styles.frameImage} />
-          <div className={styles.frameText}>
+          <Image src={frame_2} alt="" className={local_styles.frameImage} />
+          <div className={`${styles.frameText} ${local_styles.frameContent}`}>
             <span className={`${styles.title} ${local_styles.title}`}>
-              Hospedagem
+              <span className={local_styles.capitalLetter}>H</span>ospedagem
             </span>
             <Image src={bagages} alt="" className={local_styles.bagageImage} />
             <p>
