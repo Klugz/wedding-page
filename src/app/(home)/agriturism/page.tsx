@@ -15,7 +15,7 @@ export default function Agriturism() {
             className={`${styles.frameText} ${local_styles.agriturismSection}`}
           >
             <span className={styles.title}>
-              <span className={styles.capitalLetter}>A</span>
+              <span className={styles.capitalLetterAllura}>A</span>
               <span>griturismo</span>
             </span>
             <Image src={grapes} alt="" className={local_styles.grapeImage} />

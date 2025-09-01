@@ -27,7 +27,6 @@ import wine_and_pasta from "../../public/imgs/wine_and_pasta.png";
 import heart from "../../public/imgs/heart.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
-import { routerServerGlobal } from "next/dist/server/lib/router-utils/router-server-context";
 
 export default function Home() {
   type confirmationForm = {
@@ -264,7 +263,10 @@ export default function Home() {
             <div className={styles.infoDiv}>
               <div className={styles.infoSpans}>
                 <div>
-                  <span className={styles.headerSpan}>Welcome dinner</span>
+                  <span className={styles.headerSpan}>
+                    <span className={styles.capitalLetterSpan}>W</span>elcome
+                    dinner
+                  </span>
                   <span className={styles.dateSpan}>26 MAIO DE 2026</span>
                 </div>
                 <div>
@@ -297,7 +299,10 @@ export default function Home() {
               <Image src={grapes} alt="" className={styles.sideImage} />
               <div className={styles.infoSpans}>
                 <div>
-                  <span className={styles.headerSpan}>Agriturismo</span>
+                  <span className={styles.headerSpan}>
+                    <span className={styles.capitalLetterSpan}>A</span>
+                    griturismo
+                  </span>
                   <span className={styles.dateSpan}>27 MAIO DE 2026</span>
                 </div>
                 <div>
@@ -316,7 +321,10 @@ export default function Home() {
             <div className={styles.infoDiv}>
               <div className={styles.infoSpans}>
                 <div>
-                  <span className={styles.headerSpan}>Casamento</span>
+                  <span className={styles.headerSpan}>
+                    {" "}
+                    <span className={styles.capitalLetterSpan}>C</span>asamento
+                  </span>
                   <span className={styles.dateSpan}>28 MAIO DE 2026</span>
                 </div>
                 <div>
@@ -354,48 +362,42 @@ export default function Home() {
         >
           <header className={`${styles.header} ${styles.column}`}>
             <span className={styles.title}>
-              <span className={styles.capitalLetter}>C</span>omo chegar
+              <span className={styles.capitalLetterAllura}>S</span>obre a viagem
             </span>
             <Image src={plane} alt="" className={styles.planeImage} />
           </header>
           <p className={`${styles.paragraph} ${styles.column}`}>
             <span className={styles.textSpan}>
-              Para quem vem do Brasil, a melhor forma de chegar até a região da
-              toscana é voando até a Itália, com destino final nas cidades de
-              Roma ou Florença, que são os aeroportos mais próximos da região
+              Gostaríamos muito que todos possam viver essa experiência conosco
+              na Toscana, de forma tranquila e inesquecível.
             </span>
             <span className={styles.textSpan}>
-              Não há voos diretos do Brasil para Florença, mas é possível chegar
-              fazendo conexão nas principais cidades da Europa, como Lisboa,
-              Madri, Paris, Londres, Viena, Frankfurt ou Roma.
+              Para isso, contamos com a ajuda especial dos nossos amigos Angela
+              e Victor, da MHM Viagens. Eles serão responsáveis pela organização
+              da viagem dos convidados e estarão presentes no casamento,
+              oferecendo suporte próximo e personalizado em passagens,
+              hospedagem, aluguel de carro, seguro viagem e tudo o que for
+              relacionado a viagem.
+            </span>
+            <span>
+              <strong>COMO CHEGAR:</strong>
             </span>
             <span className={styles.textSpan}>
-              A maneira mais prática e confortável de chegar até a região é
-              alugar um carro, tanto em Roma quanto em Florença. Assim, vocês
-              terão mobilidade para explorar as cidades vizinhas, os vinhedos e
-              as paisagens incríveis da Toscana. <br />
-              As estradas são bem sinalizadas, seguras e com paisagens de tirar
-              o fôlego ao longo do caminho.
+              Para quem sai do Brasil, a forma mais prática é voar até Roma
+              (FCO) ou Florença (FLR) e, de lá, alugar um carro para seguir até
+              a Toscana. O trajeto até a região do casamento - Val d’Orcia -
+              leva em média 2h30 a 3h, em estradas seguras, bem sinalizadas e
+              cercadas por paisagens de tirar o fôlego. Ter um carro garante
+              facilidade e libertade para explorar cidades vizinhas, vinhedos e
+              toda a beleza incrível da região.
             </span>
-            <ul className={styles.airportList}>
-              <li className={styles.airportItem}>
-                Aeroporto de Roma (Fiumicino – FCO) <br /> Aproximadamente 2h30
-                a 3h de carro até Val d’Orcia, toscana.
-              </li>
-              <li className={styles.airportItem}>
-                Aeroporto de Florença (FLR) <br /> Aproximadamente 1h45 a 2h de
-                carro até Val d’Orcia, Toscana.
-              </li>
-            </ul>
-            <span className={styles.textSpan}>DICAS IMPORTANTES</span>
+            <span>
+              <strong>DICA:</strong>
+            </span>
             <span className={styles.textSpan}>
-              Recomendamos a compra das passagens aéreas com antecedência, tanto
-              para garantir melhores tarifas quanto para ter mais opções de voos
-              e conexões. <br /> Para quem deseja praticidade, indicamos a
-              Agência MHM, que está nos auxiliando em toda a organização da
-              viagem. Eles oferecem suporte na emissão das passagens, na escolha
-              dos melhores trajetos e também no aluguel de carro, tornando todo
-              o processo mais simples e confortável.
+              Recomendamos comprar as passagens aéreas com alguns meses de
+              antecedência para garantir melhores tarifas e mais opções de voos
+              e conexões.
             </span>
           </p>
           <button
@@ -515,7 +517,7 @@ export default function Home() {
                   onChange={handleChange}
                   placeholder="FAMILIARES NOME COMPLETO (se houver)"
                 />
-                *Somente nomes presentes no convite
+                (obrigatório)
               </label>
               <input
                 name="guest_email"

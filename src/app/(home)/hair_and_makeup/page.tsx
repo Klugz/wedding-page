@@ -18,7 +18,9 @@ export default function HairAndMakeup() {
           <div
             className={`${styles.frameText} ${local_styles.hairAndMakeupSection}`}
           >
-            <span className={styles.title}>Cabelo e maquiagem</span>
+            <span className={styles.title}>
+              <span className={styles.capitalLetter}>C</span>abelo e maquiagem
+            </span>
             <Image
               src={mirror_and_cosmetics}
               alt=""
@@ -69,9 +71,7 @@ export default function HairAndMakeup() {
                 obs: Clique nas palavras em destaque para saber mais.
               </strong>
               Ao clicar, você será redirecionado(a) para uma página com mais
-              informações. Caso ela esteja em italiano, basta clicar nos três
-              pontinhos no canto superior direito do navegador e selecionar
-              “Traduzir para o português”.
+              informações.
             </p>
           </div>
         </section>
