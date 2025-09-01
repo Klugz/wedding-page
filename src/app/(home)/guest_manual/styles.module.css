@@ -1,0 +1,51 @@
+@media (max-width: 640px) {
+  .container {
+    height: 100vh !important;
+  }
+
+  .hairAndMakeupSection {
+    width: 100vw !important;
+  }
+}
+
+.frameImage {
+  width: 90vw !important;
+  height: auto;
+}
+
+.guestManualSection {
+  margin-top: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  top: 30rem;
+  max-width: 60vw !important;
+
+  .afImage {
+    width: 20vw;
+    height: auto;
+  }
+
+  .manual {
+    list-style: none;
+    text-align: left;
+    margin-top: 5rem;
+    margin-left: 10%;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+
+    li {
+      font-size: 2rem;
+    }
+
+    li:hover {
+      color: #a3a58b;
+    }
+  }
+}

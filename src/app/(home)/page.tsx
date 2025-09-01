@@ -174,7 +174,10 @@ export default function Home() {
             <a className={styles.item} href="#gifts">
               PRESENTES
             </a>
-            <a className={styles.item} href="#gifts">
+            <a
+              className={styles.item}
+              onClick={(e) => handleClick(e, "/guest_manual")}
+            >
               MANUAL DO CONVIDADO
             </a>
           </ul>
