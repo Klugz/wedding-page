@@ -322,7 +322,7 @@ export default function Home() {
               <div className={styles.infoSpans}>
                 <div>
                   <span className={styles.headerSpan}>
-                    <span className={styles.capitalLetterAllura}>A</span>
+                    <span className={styles.capitalLetterSpanAllura}>A</span>
                     griturismo
                   </span>
                   <span className={styles.dateSpan}>27 MAIO DE 2026</span>
