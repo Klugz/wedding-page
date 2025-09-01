@@ -9,6 +9,7 @@ import nodemailer from "nodemailer";
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";
 import double_tulips from "../../public/imgs/double_tulips.png";
+import tulip from "../../public/imgs/tulip.png";
 import wedding_names from "../../public/imgs/wedding_names.png";
 import frame_1 from "../../public/imgs/frame_1.png";
 import minor_banner from "../../public/imgs/minor_banner.png";
@@ -144,7 +145,9 @@ export default function Home() {
     <div className={styles.container}>
       <header className={`${styles.header} ${styles.column}`}>
         <Image src={af_logo} alt="" className={styles.image} />
-        {/* <Image src={double_tulips} alt="" className={styles.topRightImage} /> */}
+        <div className={styles.tulipDiv}>
+          <Image src={double_tulips} alt="" className={styles.doubleTulips} />
+        </div>
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
             <a className={styles.item} href="#">
@@ -182,6 +185,8 @@ export default function Home() {
         <section id="home">
           <Image src={landscape} alt="" className={styles.landscape} />
         </section>
+
+        <Image src={tulip} alt="" className={styles.firstTulip} />
 
         <section className={`${styles.nameDateSection} ${styles.column}`}>
           <Image src={wedding_names} alt="" className={styles.weddingNames} />

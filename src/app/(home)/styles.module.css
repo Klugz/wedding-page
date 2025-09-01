@@ -10,6 +10,30 @@
   height: auto;
 }
 
+.firstTulip {
+  width: 9rem;
+  height: auto;
+
+  top: 140rem;
+  left: 2rem;
+
+  position: absolute;
+
+  transform: rotate(20deg);
+}
+
+.doubleTulips {
+  top: -1.5rem;
+  right: -1rem;
+
+  width: 12rem;
+  height: auto;
+
+  position: absolute;
+
+  transform: rotate(-140deg);
+}
+
 .title {
   font-size: 6rem;
   font-family: "Alex Brush";
@@ -51,17 +75,6 @@
   .header {
     padding-top: 5rem;
     gap: 5rem;
-
-    .topRightImage {
-      width: 45rem;
-      height: auto;
-
-      position: absolute;
-      top: -15rem;
-      right: -18.75rem;
-
-      transform: rotate(-140deg);
-    }
 
     .navList {
       list-style: none;
