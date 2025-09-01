@@ -161,7 +161,7 @@ export default function Home() {
               PROGRAMAÇÃO
             </a>
             <a className={styles.item} href="#traveling">
-              COMO CHEGAR
+              SOBRE A VIAGEM
             </a>
             <a className={styles.item} href="#housing">
               HOSPEDAGEM
@@ -322,7 +322,7 @@ export default function Home() {
               <div className={styles.infoSpans}>
                 <div>
                   <span className={styles.headerSpan}>
-                    <span className={styles.capitalLetterSpan}>A</span>
+                    <span className={styles.capitalLetterAllura}>A</span>
                     griturismo
                   </span>
                   <span className={styles.dateSpan}>27 MAIO DE 2026</span>
@@ -477,7 +477,10 @@ export default function Home() {
             <span className={styles.title}>
               <span className={styles.capitalLetter}>R</span>ecomendações
             </span>
-            <div className={styles.moreDiv}>
+            <div
+              className={styles.moreDiv}
+              onClick={(e) => handleClick(e, "/recommendations")}
+            >
               <a
                 className={styles.span}
                 onClick={(e) => handleClick(e, "/recommendations")}
@@ -486,7 +489,15 @@ export default function Home() {
               </a>
               <Image src={forest} alt="" className={styles.image} />
             </div>
-            <div className={styles.moreDiv}>
+            <div
+              className={styles.moreDiv}
+              onClick={(e) =>
+                handleClick(
+                  e,
+                  "https://www.villaapparita.it/i/blog/la-val-d-orcia-da-gustare/128"
+                )
+              }
+            >
               <a
                 target="_blank"
                 className={styles.span}
@@ -496,7 +507,10 @@ export default function Home() {
               </a>
               <Image src={wine_and_pasta} alt="" className={styles.image} />
             </div>
-            <div className={styles.moreDiv}>
+            <div
+              className={styles.moreDiv}
+              onClick={(e) => handleClick(e, "/hair_and_makeup")}
+            >
               <a
                 className={styles.span}
                 onClick={(e) => handleClick(e, "/hair_and_makeup")}
@@ -548,7 +562,7 @@ export default function Home() {
                 value={formData.guest_name}
                 onChange={handleChange}
                 required
-                placeholder="CONVIDADO NOME COMPLETO (obrigatorio)"
+                placeholder="CONVIDADO NOME COMPLETO (obrigatório)"
               />
               <label className={styles.optionalLabel} htmlFor="guest_family">
                 <input
@@ -557,17 +571,18 @@ export default function Home() {
                   type="text"
                   value={formData.guest_family}
                   onChange={handleChange}
-                  placeholder="FAMILIARES NOME COMPLETO (se houver)"
+                  required
+                  placeholder="FAMILIARES NOME COMPLETO (obrigatório)"
                 />
-                (obrigatório)
+                <strong>*Somente nomes presentes no convite</strong>
               </label>
               <input
                 name="guest_email"
                 type="text"
-                required
                 value={formData.guest_email}
                 onChange={handleChange}
-                placeholder="EMAIL*"
+                required
+                placeholder="EMAIL (obrigatório)"
               />
               <input
                 name="guest_phone"
@@ -575,7 +590,7 @@ export default function Home() {
                 value={formData.guest_phone}
                 onChange={handleChange}
                 required
-                placeholder="TELEFONE COM DDD*"
+                placeholder="TELEFONE COM DDD (obrigatório)"
               />
               <input
                 name="hotel"
@@ -590,7 +605,7 @@ export default function Home() {
                 value={formData.food_restriction}
                 onChange={handleChange}
                 required
-                placeholder="ALGUMA RESTRIÇÃO ALIMENTAR?*"
+                placeholder="ALGUMA RESTRIÇÃO ALIMENTAR? (obrigatório)"
               />
               <div className={styles.div}>
                 <span>CONFIRMO PRESENÇA EM:</span>

@@ -22,7 +22,7 @@ export default function HairAndMakeup() {
           >
             <span className={styles.title}>
               <span className={styles.capitalLetterAllura}>M</span>anual do
-              Convidado
+              convidado
             </span>
             <ul className={local_styles.manual}>
               <li>- CONFIRME SUA PRESENÇA</li>

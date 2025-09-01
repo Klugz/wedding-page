@@ -5,6 +5,7 @@ import local_styles from "./styles.module.css";
 import frame_2 from "../../../public/imgs/frame_2.png";
 import presents from "../../../public/imgs/presents.png";
 import double_tulips from "../../../public/imgs/double_tulips.png";
+import qr_code_pix from "../../../public/imgs/qr_code_pix.png";
 
 export default function Gifts() {
   return (
@@ -33,7 +34,11 @@ export default function Gifts() {
               recebido com carinho e gratidão.
             </p>
             <span>CHAVE PIX: CPF AMANDA KLUG - 068.971.099-24</span>
-            {/* <Image src={qr_code} alt="" className={local_styles.qrCodeImage} /> */}
+            <Image
+              src={qr_code_pix}
+              alt=""
+              className={local_styles.qrCodeImage}
+            />
           </div>
         </section>
       </main>

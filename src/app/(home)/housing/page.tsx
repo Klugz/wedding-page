@@ -41,7 +41,7 @@ export default function Housing() {
             <p>
               Para aproveitar a experiência com conforto e praticidade,
               sugerimos que todos os convidados se hospedem próximos ao local do
-              casamento. No dia da cerimônia, haverá um
+              casamento. No dia da cerimônia, haverá um{" "}
               <strong>
                 transfer de ida e volta para todos que estiverem hospedados em
                 um raio de até 10 km do local do evento

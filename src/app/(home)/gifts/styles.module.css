@@ -47,8 +47,9 @@
   }
 
   .qrCodeImage {
-    max-width: 25vw;
+    max-width: 20vw;
     height: auto;
+    box-shadow: 10px 5px 5px rgb(134, 133, 133);
   }
 
   span {

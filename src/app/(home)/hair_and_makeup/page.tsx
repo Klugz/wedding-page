@@ -68,13 +68,13 @@ export default function HairAndMakeup() {
                 </a>
               </li>
             </ul>
-            <p>
+            {/* <p>
               <strong>
                 obs: Clique nas palavras em destaque para saber mais.
               </strong>
               Ao clicar, você será redirecionado(a) para uma página com mais
               informações.
-            </p>
+            </p> */}
           </div>
         </section>
       </main>
