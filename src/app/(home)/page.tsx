@@ -234,6 +234,8 @@ export default function Home() {
           </div>
         </section>
 
+        <Image src={tulip} alt="" className={styles.secondTulip} />
+
         <section className={`${styles.countdownSection} ${styles.column}`}>
           <span className={`${styles.textSpan} ${styles.title}`}>
             <span className={styles.capitalLetter}>F</span>altam
@@ -258,6 +260,12 @@ export default function Home() {
             <span className={styles.countdownSpanText}>MINUTOS</span>
           </div>
         </section>
+
+        <Image
+          src={double_tulips}
+          alt=""
+          className={styles.secondDoubleTulips}
+        />
 
         <section id="schedule" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />

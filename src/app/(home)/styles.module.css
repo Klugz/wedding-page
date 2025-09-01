@@ -22,6 +22,18 @@
   transform: rotate(20deg);
 }
 
+.secondTulip {
+  width: 9rem;
+  height: auto;
+
+  top: 305rem;
+  right: 0rem;
+
+  position: absolute;
+
+  transform: rotate(-60deg);
+}
+
 .doubleTulips {
   top: -1.5rem;
   right: -1rem;
@@ -32,6 +44,18 @@
   position: absolute;
 
   transform: rotate(-140deg);
+}
+
+.secondDoubleTulips {
+  top: 415rem;
+  left: -3rem;
+
+  width: 12rem;
+  height: auto;
+
+  position: absolute;
+
+  transform: rotate(38deg);
 }
 
 .title {
