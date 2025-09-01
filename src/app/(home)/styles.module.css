@@ -22,40 +22,52 @@
   transform: rotate(20deg);
 }
 
-.secondTulip {
-  width: 9rem;
-  height: auto;
-
+.secondTulipDiv {
+  position: absolute;
+  width: 12rem;
+  overflow: hidden;
+  padding-left: 3rem;
   top: 305rem;
   right: 0rem;
 
-  position: absolute;
+  .secondTulip {
+    width: 9rem;
+    height: auto;
 
-  transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
 }
 
-.thirdTulip {
-  width: 9rem;
-  height: auto;
-
+.thirdTulipDiv {
+  position: absolute;
+  width: 12rem;
+  overflow: hidden;
+  padding-left: 3rem;
   top: 680rem;
   right: 0rem;
 
-  position: absolute;
+  .thirdTulip {
+    width: 9rem;
+    height: auto;
 
-  transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
 }
 
-.fourthTulip {
-  width: 9rem;
-  height: auto;
-
+.fourthTulipDiv {
+  position: absolute;
+  width: 12rem;
+  overflow: hidden;
+  padding-left: 3rem;
   top: 920rem;
   right: 0rem;
 
-  position: absolute;
+  .fourthTulip {
+    width: 9rem;
+    height: auto;
 
-  transform: rotate(-60deg);
+    transform: rotate(-60deg);
+  }
 }
 
 .fifthTulip {
@@ -70,14 +82,18 @@
   transform: rotate(20deg);
 }
 
-.doubleTulipsTop {
+.doubleTulipDiv {
+  position: absolute;
+  width: 12rem;
+  overflow: hidden;
+  padding-left: 2rem;
   top: -1.5rem;
-  right: -1rem;
+  right: 0rem;
+}
 
+.doubleTulipsTop {
   width: 12rem;
   height: auto;
-
-  position: absolute;
 
   transform: rotate(-140deg);
 }
@@ -190,6 +206,7 @@
   }
 
   .main {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;

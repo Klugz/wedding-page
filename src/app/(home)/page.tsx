@@ -145,7 +145,7 @@ export default function Home() {
     <div className={styles.container}>
       <header className={`${styles.header} ${styles.column}`}>
         <Image src={af_logo} alt="" className={styles.image} />
-        <div className={styles.tulipDiv}>
+        <div className={styles.doubleTulipDiv}>
           <Image
             src={double_tulips}
             alt=""
@@ -241,7 +241,9 @@ export default function Home() {
           </div>
         </section>
 
-        <Image src={tulip} alt="" className={styles.secondTulip} />
+        <div className={styles.secondTulipDiv}>
+          <Image src={tulip} alt="" className={styles.secondTulip} />
+        </div>
 
         <section className={`${styles.countdownSection} ${styles.column}`}>
           <span className={`${styles.textSpan} ${styles.title}`}>
@@ -439,7 +441,9 @@ export default function Home() {
           </button>
         </section>
 
-        <Image src={tulip} alt="" className={styles.thirdTulip} />
+        <div className={styles.thirdTulipDiv}>
+          <Image src={tulip} alt="" className={styles.thirdTulip} />
+        </div>
 
         <section
           id="housing"
@@ -508,7 +512,9 @@ export default function Home() {
           </div>
         </section>
 
-        <Image src={tulip} alt="" className={styles.fourthTulip} />
+        <div className={styles.fourthTulipDiv}>
+          <Image src={tulip} alt="" className={styles.fourthTulip} />
+        </div>
 
         <section
           id="contact"
