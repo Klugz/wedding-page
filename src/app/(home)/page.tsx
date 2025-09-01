@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import nodemailer from "nodemailer";
 
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";
@@ -29,9 +30,80 @@ import { libreBaskerville } from "../../styles/fonts/fonts";
 import { routerServerGlobal } from "next/dist/server/lib/router-utils/router-server-context";
 
 export default function Home() {
+  type confirmationForm = {
+    guest_name: string;
+    guest_family: string;
+    guest_email: string;
+    guest_phone: string;
+    hotel: string;
+    food_restriction: string;
+    welcome_dinner: boolean;
+    agriturism: boolean;
+    wedding: boolean;
+    dinner_wedding: boolean;
+    dinner_agriturism_wedding: boolean;
+    cant_come: boolean;
+  };
+
   const router = useRouter();
   const targetDate = new Date(2026, 4, 26, 0, 0, 0);
-  // Months in JS are 0-indexed (4 = May)
+  const checkbox_inputs = [
+    "welcome_dinner",
+    "agriturism",
+    "wedding",
+    "dinner_wedding",
+    "dinner_agriturism_wedding",
+    "cant_come",
+  ];
+  const [formData, setFormData] = useState({} as confirmationForm);
+  const [status, setStatus] = useState("");
+  const updatedFormData: Record<string, boolean> = {};
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (checkbox_inputs.includes(e.target.name)) {
+      checkbox_inputs.forEach((input_name) => {
+        input_name === e.target.name
+          ? (updatedFormData[input_name] = true)
+          : (updatedFormData[input_name] = false);
+      });
+      setFormData({ ...formData, ...updatedFormData });
+    } else {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const res = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      setStatus("Email sent successfully!");
+      setFormData({
+        guest_name: "",
+        guest_family: "",
+        guest_email: "",
+        guest_phone: "",
+        hotel: "",
+        food_restriction: "",
+        welcome_dinner: false,
+        agriturism: false,
+        wedding: false,
+        dinner_wedding: false,
+        dinner_agriturism_wedding: false,
+        cant_come: false,
+      });
+    } else {
+      setStatus("Failed to send email. Try again.");
+    }
+  };
 
   const [timeLeft, setTimeLeft] = useState({
     days: "00",
@@ -419,43 +491,60 @@ export default function Home() {
         <section id="confirmation" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImageForm} />
           <form
-            method="POST"
-            action="mailto:henriqueklug@gmail.com?subject=subject&body=body'"
             className={`${styles.frameForm} ${styles.column}`}
-            onSubmit={(e) => {
-              e.preventDefault();
-            }}
+            onSubmit={handleSubmit}
           >
             <fieldset className={`${styles.fieldset} ${styles.column}`}>
               <legend className={styles.title}>
                 <span className={styles.capitalLetter}>C</span>onfirmar presença
               </legend>
               <input
-                name="guest"
+                name="guest_name"
                 type="text"
+                value={formData.guest_name}
+                onChange={handleChange}
                 required
                 placeholder="CONVIDADO NOME COMPLETO (obrigatorio)"
               />
-              <label className={styles.optionalLabel} htmlFor="family">
+              <label className={styles.optionalLabel} htmlFor="guest_family">
                 <input
-                  id="family"
-                  name="family"
+                  id="guest_family"
+                  name="guest_family"
                   type="text"
+                  value={formData.guest_family}
+                  onChange={handleChange}
                   placeholder="FAMILIARES NOME COMPLETO (se houver)"
                 />
                 *Somente nomes presentes no convite
               </label>
-              <input name="email" type="text" required placeholder="EMAIL*" />
               <input
-                name="phone"
+                name="guest_email"
                 type="text"
+                required
+                value={formData.guest_email}
+                onChange={handleChange}
+                placeholder="EMAIL*"
+              />
+              <input
+                name="guest_phone"
+                type="text"
+                value={formData.guest_phone}
+                onChange={handleChange}
                 required
                 placeholder="TELEFONE COM DDD*"
               />
-              <input type="text" placeholder="LOCAL DE HOSPEDAGEM" />
+              <input
+                name="hotel"
+                type="text"
+                value={formData.hotel}
+                onChange={handleChange}
+                placeholder="LOCAL DE HOSPEDAGEM"
+              />
               <input
                 name="food_restriction"
                 type="text"
+                value={formData.food_restriction}
+                onChange={handleChange}
                 required
                 placeholder="ALGUMA RESTRIÇÃO ALIMENTAR?*"
               />
@@ -465,43 +554,53 @@ export default function Home() {
                   <input
                     id="welcome_dinner"
                     name="welcome_dinner"
+                    checked={formData.welcome_dinner ? true : false}
+                    onChange={handleChange}
                     type="checkbox"
                     className={styles.checkbox}
                   />
                   WELCOME DINNER
                 </label>
-                <label htmlFor="agriturismo">
+                <label htmlFor="agriturism">
                   <input
-                    id="agriturismo"
-                    name="agriturismo"
+                    id="agriturism"
+                    name="agriturism"
+                    checked={formData.agriturism ? true : false}
+                    onChange={handleChange}
                     type="checkbox"
                     className={styles.checkbox}
                   />
                   AGRITURISMO
                 </label>
-                <label htmlFor="casamento">
+                <label htmlFor="wedding">
                   <input
-                    id="casamento"
-                    name="casamento"
+                    id="wedding"
+                    name="wedding"
+                    checked={formData.wedding ? true : false}
+                    onChange={handleChange}
                     type="checkbox"
                     className={styles.checkbox}
                   />
                   CASAMENTO
                 </label>
-                <label htmlFor="welcome_dinner_marriage">
+                <label htmlFor="dinner_wedding">
                   <input
-                    id="welcome_dinner_marriage"
-                    name="welcome_dinner_marriage"
+                    id="dinner_wedding"
+                    name="dinner_wedding"
+                    checked={formData.dinner_wedding ? true : false}
+                    onChange={handleChange}
                     type="checkbox"
                     className={styles.checkbox}
                   />
                   WELCOME DINNER e CASAMENTO
                 </label>
-                <label htmlFor="welcome_dinner_marriage_agriturism">
+                <label htmlFor="dinner_agriturism_wedding">
                   <input
-                    id="welcome_dinner_marriage_agriturism"
-                    name="welcome_dinner_marriage_agriturism"
+                    id="dinner_agriturism_wedding"
+                    name="dinner_agriturism_wedding"
                     type="checkbox"
+                    checked={formData.dinner_agriturism_wedding ? true : false}
+                    onChange={handleChange}
                     className={styles.checkbox}
                   />
                   WELCOME DINNER, AGRITURISMO e CASAMENTO
@@ -510,6 +609,8 @@ export default function Home() {
                   <input
                     id="cant_come"
                     name="cant_come"
+                    checked={formData.cant_come ? true : false}
+                    onChange={handleChange}
                     type="checkbox"
                     className={styles.checkbox}
                   />
