@@ -34,6 +34,54 @@
   transform: rotate(-60deg);
 }
 
+.thirdTulip {
+  width: 9rem;
+  height: auto;
+
+  top: 680rem;
+  right: 0rem;
+
+  position: absolute;
+
+  transform: rotate(-60deg);
+}
+
+.fourthTulip {
+  width: 9rem;
+  height: auto;
+
+  top: 920rem;
+  right: 0rem;
+
+  position: absolute;
+
+  transform: rotate(-60deg);
+}
+
+.fifthTulip {
+  width: 9rem;
+  height: auto;
+
+  top: 1110rem;
+  left: 2rem;
+
+  position: absolute;
+
+  transform: rotate(20deg);
+}
+
+.doubleTulipsTop {
+  top: -1.5rem;
+  right: -1rem;
+
+  width: 12rem;
+  height: auto;
+
+  position: absolute;
+
+  transform: rotate(-140deg);
+}
+
 .doubleTulipsLeft {
   top: -5rem;
   left: -1rem;
@@ -46,18 +94,6 @@
   transform: rotate(130deg);
 }
 
-.doubleTulips {
-  top: -1.5rem;
-  right: -1rem;
-
-  width: 12rem;
-  height: auto;
-
-  position: absolute;
-
-  transform: rotate(-140deg);
-}
-
 .secondDoubleTulips {
   top: 415rem;
   left: -3rem;
@@ -68,6 +104,30 @@
   position: absolute;
 
   transform: rotate(38deg);
+}
+
+.thirdDoubleTulips {
+  top: 580rem;
+  left: 0rem;
+
+  width: 12rem;
+  height: auto;
+
+  position: absolute;
+
+  transform: rotate(120deg);
+}
+
+.fourthDoubleTulips {
+  top: 754rem;
+  left: 0rem;
+
+  width: 12rem;
+  height: auto;
+
+  position: absolute;
+
+  transform: rotate(60deg);
 }
 
 .title {

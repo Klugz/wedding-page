@@ -146,7 +146,11 @@ export default function Home() {
       <header className={`${styles.header} ${styles.column}`}>
         <Image src={af_logo} alt="" className={styles.image} />
         <div className={styles.tulipDiv}>
-          <Image src={double_tulips} alt="" className={styles.doubleTulips} />
+          <Image
+            src={double_tulips}
+            alt=""
+            className={styles.doubleTulipsTop}
+          />
         </div>
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
@@ -372,6 +376,12 @@ export default function Home() {
           </div>
         </section>
 
+        <Image
+          src={double_tulips}
+          alt=""
+          className={styles.thirdDoubleTulips}
+        />
+
         <section
           id="traveling"
           className={`${styles.travelingSection} ${styles.column}`}
@@ -429,6 +439,8 @@ export default function Home() {
           </button>
         </section>
 
+        <Image src={tulip} alt="" className={styles.thirdTulip} />
+
         <section
           id="housing"
           className={`${styles.housingSection} ${styles.column}`}
@@ -448,6 +460,12 @@ export default function Home() {
             CONFIRA AS SUGESTÕES DE HOSPEDAGENS FEITA PELA AGÊNCIA MHM
           </span>
         </section>
+
+        <Image
+          src={double_tulips}
+          alt=""
+          className={styles.fourthDoubleTulips}
+        />
 
         <section id="recommendations" className={styles.frameSection}>
           <Image src={frame_1} alt="" className={styles.frameImage} />
@@ -489,6 +507,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Image src={tulip} alt="" className={styles.fourthTulip} />
 
         <section
           id="contact"
@@ -639,6 +659,8 @@ export default function Home() {
             </fieldset>
           </form>
         </section>
+
+        <Image src={tulip} alt="" className={styles.fifthTulip} />
 
         <section
           id="gifts"
