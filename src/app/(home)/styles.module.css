@@ -34,6 +34,18 @@
   transform: rotate(-60deg);
 }
 
+.doubleTulipsLeft {
+  top: -5rem;
+  left: -1rem;
+
+  width: 12rem;
+  height: auto;
+
+  position: absolute;
+
+  transform: rotate(130deg);
+}
+
 .doubleTulips {
   top: -1.5rem;
   right: -1rem;

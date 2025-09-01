@@ -11,6 +11,7 @@ import frame_2_bottom from "../../../public/imgs/frame_2_bottom.png";
 import bagages from "../../../public/imgs/bagages.png";
 import hotel_1_image from "../../../public/imgs/hotel_1_image.png";
 import hotel_2_image from "../../../public/imgs/hotel_2_image.png";
+import double_tulips from "../../../public/imgs/double_tulips.png";
 
 export default function Housing() {
   const router = useRouter();
@@ -22,6 +23,7 @@ export default function Housing() {
   return (
     <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
+        <Image src={double_tulips} alt="" className={styles.doubleTulipsLeft} />
         <section
           className={`${styles.frameSection} ${local_styles.housingSection}`}
         >

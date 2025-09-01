@@ -4,11 +4,13 @@ import local_styles from "./styles.module.css";
 
 import frame_1 from "../../../public/imgs/frame_1.png";
 import forest from "../../../public/imgs/forest.png";
+import double_tulips from "../../../public/imgs/double_tulips.png";
 
 export default function Recommendations() {
   return (
     <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
+        <Image src={double_tulips} alt="" className={styles.doubleTulipsLeft} />
         <section className={`${styles.frameSection}`}>
           <Image
             src={frame_1}

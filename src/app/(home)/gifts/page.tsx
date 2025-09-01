@@ -4,12 +4,13 @@ import local_styles from "./styles.module.css";
 
 import frame_2 from "../../../public/imgs/frame_2.png";
 import presents from "../../../public/imgs/presents.png";
-import qr_code from "../../../public/imgs/qr_code.png";
+import double_tulips from "../../../public/imgs/double_tulips.png";
 
 export default function Gifts() {
   return (
     <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
+        <Image src={double_tulips} alt="" className={styles.doubleTulipsLeft} />
         <section
           className={`${styles.frameSection} ${local_styles.giftsSection}`}
         >
