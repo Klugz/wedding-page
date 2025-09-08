@@ -4,7 +4,8 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import nodemailer from "nodemailer";
+import language_pt_br from "../../public/text/pt-br.json";
+import language_it_it from "../../public/text/it-it.json";
 
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";
@@ -58,6 +59,21 @@ export default function Home() {
   const [formData, setFormData] = useState({} as confirmationForm);
   const [status, setStatus] = useState("");
   const updatedFormData: Record<string, boolean> = {};
+  const [language, setLanguage] = useState<string>("pt-br");
+
+  const getJsonTextLanguage = (
+    language: string,
+    component: string,
+    index: number
+  ) => {
+    if (language == "pt-br") {
+      //@ts-ignore
+      return language_pt_br[component][index];
+    } else {
+      //@ts-ignore
+      return language_it_it[component][index];
+    }
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -155,34 +171,34 @@ export default function Home() {
         <nav>
           <ul className={`${styles.navList} ${libreBaskerville.className}`}>
             <a className={styles.item} href="#">
-              HOME
+              {getJsonTextLanguage(language, "navBar", 0)}
             </a>
             <a className={styles.item} href="#schedule">
-              PROGRAMAÇÃO
+              {getJsonTextLanguage(language, "navBar", 1)}
             </a>
             <a className={styles.item} href="#traveling">
-              SOBRE A VIAGEM
+              {getJsonTextLanguage(language, "navBar", 2)}
             </a>
             <a className={styles.item} href="#housing">
-              HOSPEDAGEM
+              {getJsonTextLanguage(language, "navBar", 3)}
             </a>
             <a className={styles.item} href="#recommendations">
-              RECOMENDAÇÕES
+              {getJsonTextLanguage(language, "navBar", 4)}
             </a>
             <a className={styles.item} href="#contact">
-              CONTATO
+              {getJsonTextLanguage(language, "navBar", 5)}
             </a>
             <a className={styles.item} href="#confirmation">
-              CONFIRMAR PRESENÇA
+              {getJsonTextLanguage(language, "navBar", 6)}
             </a>
             <a className={styles.item} href="#gifts">
-              PRESENTES
+              {getJsonTextLanguage(language, "navBar", 7)}
             </a>
             <a
               className={styles.item}
               onClick={(e) => handleClick(e, "/guest_manual")}
             >
-              MANUAL DO CONVIDADO
+              {getJsonTextLanguage(language, "navBar", 8)}
             </a>
           </ul>
         </nav>
