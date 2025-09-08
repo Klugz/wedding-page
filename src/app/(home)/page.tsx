@@ -214,7 +214,8 @@ export default function Home() {
         <section className={`${styles.nameDateSection} ${styles.column}`}>
           <Image src={wedding_names} alt="" className={styles.weddingNames} />
           <span className={styles.datesSpan}>
-            26 A 29 DE MAIO DE 2026 <br /> LOCAL: PODERE LAMONE & LAMINO
+            {getJsonTextLanguage(language, "dateSpan", 0)} <br />
+            {getJsonTextLanguage(language, "dateSpan", 1)}
           </span>
         </section>
 
@@ -223,34 +224,23 @@ export default function Home() {
           <div className={styles.frameText}>
             <span className={styles.textSpan}>Cari amici e familiari,</span>
             <span className={styles.textSpan}>
-              A Itália faz parte da nossa história e da nossa trajetória como
-              casal. Mais do que um lugar, ela representa uma conexão profunda
-              com as nossas memórias, nossos sonhos e com a cultura que o
-              Filippo carrega — e que, com o tempo, também se tornou parte de
-              nós. Foi cenário de viagens inesquecíveis, de descobertas e de
-              tantos momentos especiais que vivemos juntos ao longo dos anos.
+              {getJsonTextLanguage(language, "letterForm", 0)}
             </span>
             <span className={styles.textSpan}>
-              Por isso, escolhemos a Toscana — com suas paisagens encantadoras,
-              seus vinhedos, suas colinas e sua atmosfera romântica — para
-              celebrar o amor e o início de um novo capítulo das nossas vidas.
+              {getJsonTextLanguage(language, "letterForm", 1)}
             </span>
             <span className={styles.textSpan}>
-              Estamos preparando tudo com muito carinho, desejando que esses
-              dias tenham a nossa essência, sejam felizes e inesquecíveis para
-              todos que estarão conosco.
+              {getJsonTextLanguage(language, "letterForm", 2)}
             </span>
             <span className={styles.textSpan}>
-              A presença de cada um de vocês tornará esse momento ainda mais
-              especial.
+              {getJsonTextLanguage(language, "letterForm", 3)}
             </span>
             <span className={styles.textSpan}>
-              Aqui reunimos informações importantes para que possam se organizar
-              e aproveitar essa experiência da melhor forma possível.
+              {getJsonTextLanguage(language, "letterForm", 4)}
             </span>
             <span className={styles.textSpan}>Vi aspettiamo in Toscana!</span>
             <span className={styles.textSpan}>
-              Com carinho,
+              {getJsonTextLanguage(language, "letterForm", 5)}
               <br /> Amanda & Filippo
             </span>
             <Image src={heart} alt="" className={styles.heartImage} />
@@ -263,7 +253,10 @@ export default function Home() {
 
         <section className={`${styles.countdownSection} ${styles.column}`}>
           <span className={`${styles.textSpan} ${styles.title}`}>
-            <span className={styles.capitalLetter}>F</span>altam
+            <span className={styles.capitalLetter}>
+              {getJsonTextLanguage(language, "countDownSection", 0)}
+            </span>
+            {getJsonTextLanguage(language, "countDownSection", 1)}
           </span>
           <Image src={minor_banner} alt="" className={styles.minorBanner} />
           <Image src={motorcycle} alt="" className={styles.motorcycle} />
@@ -280,9 +273,15 @@ export default function Home() {
             </span>
           </div>
           <div className={styles.countdownDiv}>
-            <span className={styles.countdownSpanText}>DIAS</span>
-            <span className={styles.countdownSpanText}>HORAS</span>
-            <span className={styles.countdownSpanText}>MINUTOS</span>
+            <span className={styles.countdownSpanText}>
+              {getJsonTextLanguage(language, "countDownSection", 2)}
+            </span>
+            <span className={styles.countdownSpanText}>
+              {getJsonTextLanguage(language, "countDownSection", 3)}
+            </span>
+            <span className={styles.countdownSpanText}>
+              {getJsonTextLanguage(language, "countDownSection", 4)}
+            </span>
           </div>
         </section>
 
@@ -296,16 +295,23 @@ export default function Home() {
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
             <span className={styles.title}>
-              <span className={styles.capitalLetter}>P</span>rogramação
+              <span className={styles.capitalLetter}>
+                {getJsonTextLanguage(language, "scheduleForm", 0)}
+              </span>
+              {getJsonTextLanguage(language, "scheduleForm", 1)}
             </span>
             <div className={styles.infoDiv}>
               <div className={styles.infoSpans}>
                 <div>
                   <span className={styles.headerSpan}>
-                    <span className={styles.capitalLetterSpan}>W</span>elcome
-                    dinner
+                    <span className={styles.capitalLetterSpan}>
+                      {getJsonTextLanguage(language, "scheduleForm", 2)}
+                    </span>
+                    {getJsonTextLanguage(language, "scheduleForm", 3)}
                   </span>
-                  <span className={styles.dateSpan}>26 MAIO DE 2026</span>
+                  <span className={styles.dateSpan}>
+                    {getJsonTextLanguage(language, "scheduleForm", 4)}
+                  </span>
                 </div>
                 <div>
                   <span className={styles.hourSpan}>19h</span>
@@ -323,7 +329,7 @@ export default function Home() {
                     className={styles.textLink}
                     href="https://br.pinterest.com/amanklug/outfits-welcome-dinner"
                   >
-                    TRAJE: ESPORTE FINO
+                    {getJsonTextLanguage(language, "scheduleForm", 5)}
                   </a>
                 </div>
               </div>
@@ -338,10 +344,14 @@ export default function Home() {
               <div className={styles.infoSpans}>
                 <div>
                   <span className={styles.headerSpan}>
-                    <span className={styles.capitalLetterSpanAllura}>A</span>
-                    griturismo
+                    <span className={styles.capitalLetterSpanAllura}>
+                      {getJsonTextLanguage(language, "scheduleForm", 6)}
+                    </span>
+                    {getJsonTextLanguage(language, "scheduleForm", 7)}
                   </span>
-                  <span className={styles.dateSpan}>27 MAIO DE 2026</span>
+                  <span className={styles.dateSpan}>
+                    {getJsonTextLanguage(language, "scheduleForm", 8)}
+                  </span>
                 </div>
                 <div>
                   <span className={styles.hourSpan}>10h</span>
@@ -351,7 +361,7 @@ export default function Home() {
                     className={styles.textLink}
                     onClick={(e) => handleClick(e, "/agriturism")}
                   >
-                    SAIBA MAIS
+                    {getJsonTextLanguage(language, "scheduleForm", 9)}
                   </a>
                 </div>
               </div>
@@ -360,10 +370,14 @@ export default function Home() {
               <div className={styles.infoSpans}>
                 <div>
                   <span className={styles.headerSpan}>
-                    {" "}
-                    <span className={styles.capitalLetterSpan}>C</span>asamento
+                    <span className={styles.capitalLetterSpan}>
+                      {getJsonTextLanguage(language, "scheduleForm", 10)}
+                    </span>
+                    {getJsonTextLanguage(language, "scheduleForm", 11)}
                   </span>
-                  <span className={styles.dateSpan}>28 MAIO DE 2026</span>
+                  <span className={styles.dateSpan}>
+                    {getJsonTextLanguage(language, "scheduleForm", 12)}
+                  </span>
                 </div>
                 <div>
                   <span className={styles.hourSpan}>17h</span>
@@ -381,7 +395,7 @@ export default function Home() {
                     className={styles.textLink}
                     href="https://br.pinterest.com/amanklug/outfits-wedding-day"
                   >
-                    TRAJE: SOCIAL COMPLETO
+                    {getJsonTextLanguage(language, "scheduleForm", 13)}
                   </a>
                 </div>
               </div>
@@ -406,42 +420,35 @@ export default function Home() {
         >
           <header className={`${styles.header} ${styles.column}`}>
             <span className={styles.title}>
-              <span className={styles.capitalLetterAllura}>S</span>obre a viagem
+              <span className={styles.capitalLetterAllura}>
+                {getJsonTextLanguage(language, "travelingSection", 0)}
+              </span>
+              {getJsonTextLanguage(language, "travelingSection", 1)}
             </span>
             <Image src={plane} alt="" className={styles.planeImage} />
           </header>
           <p className={`${styles.paragraph} ${styles.column}`}>
             <span className={styles.textSpan}>
-              Gostaríamos muito que todos possam viver essa experiência conosco
-              na Toscana, de forma tranquila e inesquecível.
+              {getJsonTextLanguage(language, "travelingSection", 2)}
             </span>
             <span className={styles.textSpan}>
-              Para isso, contamos com a ajuda especial dos nossos amigos Angela
-              e Victor, da MHM Viagens. Eles serão responsáveis pela organização
-              da viagem dos convidados e estarão presentes no casamento,
-              oferecendo suporte próximo e personalizado em passagens,
-              hospedagem, aluguel de carro, seguro viagem e tudo o que for
-              relacionado a viagem.
+              {getJsonTextLanguage(language, "travelingSection", 3)}
             </span>
             <span>
-              <strong>COMO CHEGAR:</strong>
+              <strong>
+                {getJsonTextLanguage(language, "travelingSection", 4)}
+              </strong>
             </span>
             <span className={styles.textSpan}>
-              Para quem sai do Brasil, a forma mais prática é voar até Roma
-              (FCO) ou Florença (FLR) e, de lá, alugar um carro para seguir até
-              a Toscana. O trajeto até a região do casamento - Val d’Orcia -
-              leva em média 2h30 a 3h, em estradas seguras, bem sinalizadas e
-              cercadas por paisagens de tirar o fôlego. Ter um carro garante
-              facilidade e libertade para explorar cidades vizinhas, vinhedos e
-              toda a beleza incrível da região.
+              {getJsonTextLanguage(language, "travelingSection", 5)}
             </span>
             <span>
-              <strong>DICA:</strong>
+              <strong>
+                {getJsonTextLanguage(language, "travelingSection", 6)}
+              </strong>
             </span>
             <span className={styles.textSpan}>
-              Recomendamos comprar as passagens aéreas com alguns meses de
-              antecedência para garantir melhores tarifas e mais opções de voos
-              e conexões.
+              {getJsonTextLanguage(language, "travelingSection", 7)}
             </span>
           </p>
           <button
