@@ -427,41 +427,93 @@ export default function Home() {
             </span>
             <Image src={plane} alt="" className={styles.planeImage} />
           </header>
-          <p className={`${styles.paragraph} ${styles.column}`}>
-            <span className={styles.textSpan}>
-              {getJsonTextLanguage(language, "travelingSection", 2)}
-            </span>
-            <span className={styles.textSpan}>
-              {getJsonTextLanguage(language, "travelingSection", 3)}
-            </span>
-            <span>
-              <strong>
-                {getJsonTextLanguage(language, "travelingSection", 4)}
-              </strong>
-            </span>
-            <span className={styles.textSpan}>
-              {getJsonTextLanguage(language, "travelingSection", 5)}
-            </span>
-            <span>
-              <strong>
-                {getJsonTextLanguage(language, "travelingSection", 6)}
-              </strong>
-            </span>
-            <span className={styles.textSpan}>
-              {getJsonTextLanguage(language, "travelingSection", 7)}
-            </span>
-          </p>
-          <button
-            className={styles.button}
-            onClick={(e) =>
-              handleClick(
-                e,
-                "https://api.whatsapp.com/send/?phone=5541992525117&text&type=phone_number&app_absent=0"
-              )
-            }
-          >
-            <span>CONTATO AGÊNCIA DE VIAGEM MHM</span>
-          </button>
+          {language == "pt-br" ? (
+            <>
+              <p className={`${styles.paragraph} ${styles.column}`}>
+                <span className={styles.textSpan}>
+                  Gostaríamos muito que todos possam viver essa experiência
+                  conosco na Toscana, de forma tranquila e inesquecível.
+                </span>
+                <span className={styles.textSpan}>
+                  Para isso, contamos com a ajuda especial dos nossos amigos
+                  Angela e Victor, da MHM Viagens. Eles serão responsáveis pela
+                  organização da viagem dos convidados e estarão presentes no
+                  casamento, oferecendo suporte próximo e personalizado em
+                  passagens, hospedagem, aluguel de carro, seguro viagem e tudo
+                  o que for relacionado a viagem.
+                </span>
+                <span>
+                  <strong>COMO CHEGAR:</strong>
+                </span>
+                <span className={styles.textSpan}>
+                  Para quem sai do Brasil, a forma mais prática é voar até Roma
+                  (FCO) ou Florença (FLR) e, de lá, alugar um carro para seguir
+                  até a Toscana. O trajeto até a região do casamento - Val
+                  d’Orcia - leva em média 2h30 a 3h, em estradas seguras, bem
+                  sinalizadas e cercadas por paisagens de tirar o fôlego. Ter um
+                  carro garante facilidade e libertade para explorar cidades
+                  vizinhas, vinhedos e toda a beleza incrível da região.
+                </span>
+                <span>
+                  <strong>DICA:</strong>
+                </span>
+                <span className={styles.textSpan}>
+                  Recomendamos comprar as passagens aéreas com alguns meses de
+                  antecedência para garantir melhores tarifas e mais opções de
+                  voos e conexões.
+                </span>
+              </p>
+              <button
+                className={styles.button}
+                onClick={(e) =>
+                  handleClick(
+                    e,
+                    "https://api.whatsapp.com/send/?phone=5541992525117&text&type=phone_number&app_absent=0"
+                  )
+                }
+              >
+                <span>CONTATO AGÊNCIA DE VIAGEM MHM</span>
+              </button>
+            </>
+          ) : (
+            <p className={`${styles.paragraph} ${styles.column}`}>
+              <span className={styles.textSpan}>
+                Ci sono diversi modi per arrivare, e ognuno ha i suoi vantaggi.
+                Scegliete quello che si adatta meglio a voi:
+              </span>
+              <span className={styles.textSpan}>
+                <strong>In Auto:</strong> Se vi piace viaggiare in libertà e
+                godervi i paesaggi lungo il percorso, andare in auto è un’ottima
+                scelta. In questo modo potrete stabilire il vostro ritmo, fare
+                piccole soste e vivere il viaggio prima ancora di arrivare nella
+                regione del nostro matrimonio. Per gruppi fino a 5 persone,
+                questa può essere l’opzione più economica.
+              </span>
+              <span className={styles.textSpan}>
+                <strong>In Aereo:</strong> Se arrivate da regioni più lontane,
+                come Milano, volare può essere il modo più rapido e pratico per
+                raggiungerci. L’aeroporto più vicino al luogo del matrimonio è
+                l’Aeroporto di Firenze, che offre buoni collegamenti interni.
+              </span>
+              <span className={styles.textSpan}>
+                <strong>In Treno:</strong>Viaggiare in treno è un’altra
+                alternativa comoda e rilassante, che vi permette di godervi il
+                percorso senza preoccuparvi del traffico. Le principali stazioni
+                più vicine al luogo del matrimonio sono quelle di Firenze e
+                Siena.
+              </span>
+              <span className={styles.textSpan}>
+                <strong>Importante:</strong> Se scegliete di arrivare in aereo o
+                in treno, sarà necessario afittare un’auto per completare il
+                percorso fino al luogo del matrimonio, che si trova nella
+                regione della Val d’Orcia, tra le città di Pienza e
+                Monticchiello. Inoltre, avere un’auto vi garantirà comodità e
+                libertà per esplorare i borghi vicini, le vigne e tutta la
+                bellezza incredibile della regione nei giorni precedenti o
+                successivi al matrimonio.
+              </span>
+            </p>
+          )}
         </section>
 
         <div className={styles.thirdTulipDiv}>
@@ -474,17 +526,28 @@ export default function Home() {
         >
           <Image src={line_division} alt="" className={styles.lineDivision} />
           <span className={styles.title}>
-            <span className={styles.capitalLetter}>H</span>ospedagem
+            <span
+              className={`${
+                language == "pt-br"
+                  ? styles.capitalLetter
+                  : styles.capitalLetterAllura
+              }`}
+            >
+              {getJsonTextLanguage(language, "housingSection", 0)}
+            </span>
+            {getJsonTextLanguage(language, "housingSection", 1)}
           </span>
           <Image src={bagages} alt="" className={styles.bagagesImage} />
           <button
             className={styles.button}
             onClick={(e) => handleClick(e, "/housing")}
           >
-            CLIQUE AQUI
+            {getJsonTextLanguage(language, "housingSection", 2)}
           </button>
           <span className={styles.span}>
-            CONFIRA AS SUGESTÕES DE HOSPEDAGENS FEITA PELA AGÊNCIA MHM
+            {language == "pt-br"
+              ? "CONFIRA AS SUGESTÕES DE HOSPEDAGENS FEITA PELA AGÊNCIA MHM"
+              : ""}
           </span>
         </section>
 
@@ -498,7 +561,10 @@ export default function Home() {
           <Image src={frame_1} alt="" className={styles.frameImage} />
           <div className={styles.frameText}>
             <span className={styles.title}>
-              <span className={styles.capitalLetter}>R</span>ecomendações
+              <span className={styles.capitalLetter}>
+                {getJsonTextLanguage(language, "recommendationsSection", 0)}
+              </span>
+              {getJsonTextLanguage(language, "recommendationsSection", 1)}
             </span>
             <div
               className={styles.moreDiv}
@@ -508,7 +574,7 @@ export default function Home() {
                 className={styles.span}
                 onClick={(e) => handleClick(e, "/recommendations")}
               >
-                O QUE FAZER NA REGIÃO
+                {getJsonTextLanguage(language, "recommendationsSection", 2)}
               </a>
               <Image src={forest} alt="" className={styles.image} />
             </div>
@@ -526,7 +592,7 @@ export default function Home() {
                 className={styles.span}
                 href="https://www.villaapparita.it/i/blog/la-val-d-orcia-da-gustare/128"
               >
-                GASTRONOMIA TÍPICA
+                {getJsonTextLanguage(language, "recommendationsSection", 3)}
               </a>
               <Image src={wine_and_pasta} alt="" className={styles.image} />
             </div>
@@ -538,7 +604,7 @@ export default function Home() {
                 className={styles.span}
                 onClick={(e) => handleClick(e, "/hair_and_makeup")}
               >
-                CABELO E MAQUIAGEM
+                {getJsonTextLanguage(language, "recommendationsSection", 4)}
               </a>
               <Image
                 src={mirror_and_cosmetics}
@@ -557,11 +623,13 @@ export default function Home() {
           id="contact"
           className={`${styles.contactSection} ${styles.column}`}
         >
-          <span className={styles.title}>contato</span>
+          <span className={styles.title}>
+            {getJsonTextLanguage(language, "contactSection", 0)}
+          </span>
           <p className={styles.paragraphText}>
-            <span>Para mais informações ou em caso de dúvidas,</span>
-            <span>entrar em contato com a assessoria do casamento</span>
-            <span>Lara e Julia – My Italy wedding planner</span>
+            <span>{getJsonTextLanguage(language, "contactSection", 1)}</span>
+            <span>{getJsonTextLanguage(language, "contactSection", 2)}</span>
+            <span>{getJsonTextLanguage(language, "contactSection", 3)}</span>
           </p>
           <p className={styles.paragraphText}>
             <span>myitalyweddingplanner@gmail.com</span>
@@ -577,7 +645,10 @@ export default function Home() {
           >
             <fieldset className={`${styles.fieldset} ${styles.column}`}>
               <legend className={styles.title}>
-                <span className={styles.capitalLetter}>C</span>onfirmar presença
+                <span className={styles.capitalLetter}>
+                  {getJsonTextLanguage(language, "ConfirmationSection", 0)}
+                </span>
+                {getJsonTextLanguage(language, "ConfirmationSection", 1)}
               </legend>
               <input
                 name="guest_name"
@@ -585,7 +656,11 @@ export default function Home() {
                 value={formData.guest_name}
                 onChange={handleChange}
                 required
-                placeholder="CONVIDADO NOME COMPLETO (obrigatório)"
+                placeholder={getJsonTextLanguage(
+                  language,
+                  "ConfirmationSection",
+                  2
+                )}
               />
               <label className={styles.optionalLabel} htmlFor="guest_family">
                 <input
@@ -595,9 +670,15 @@ export default function Home() {
                   value={formData.guest_family}
                   onChange={handleChange}
                   required
-                  placeholder="FAMILIARES NOME COMPLETO (obrigatório)"
+                  placeholder={getJsonTextLanguage(
+                    language,
+                    "ConfirmationSection",
+                    3
+                  )}
                 />
-                <strong>*Somente nomes presentes no convite</strong>
+                <strong>
+                  {getJsonTextLanguage(language, "ConfirmationSection", 4)}
+                </strong>
               </label>
               <input
                 name="guest_email"
@@ -605,7 +686,11 @@ export default function Home() {
                 value={formData.guest_email}
                 onChange={handleChange}
                 required
-                placeholder="EMAIL (obrigatório)"
+                placeholder={getJsonTextLanguage(
+                  language,
+                  "ConfirmationSection",
+                  5
+                )}
               />
               <input
                 name="guest_phone"
@@ -613,14 +698,22 @@ export default function Home() {
                 value={formData.guest_phone}
                 onChange={handleChange}
                 required
-                placeholder="TELEFONE COM DDD (obrigatório)"
+                placeholder={getJsonTextLanguage(
+                  language,
+                  "ConfirmationSection",
+                  6
+                )}
               />
               <input
                 name="hotel"
                 type="text"
                 value={formData.hotel}
                 onChange={handleChange}
-                placeholder="LOCAL DE HOSPEDAGEM"
+                placeholder={getJsonTextLanguage(
+                  language,
+                  "ConfirmationSection",
+                  7
+                )}
               />
               <input
                 name="food_restriction"
@@ -628,10 +721,16 @@ export default function Home() {
                 value={formData.food_restriction}
                 onChange={handleChange}
                 required
-                placeholder="ALGUMA RESTRIÇÃO ALIMENTAR? (obrigatório)"
+                placeholder={getJsonTextLanguage(
+                  language,
+                  "ConfirmationSection",
+                  8
+                )}
               />
               <div className={styles.div}>
-                <span>CONFIRMO PRESENÇA EM:</span>
+                <span>
+                  {getJsonTextLanguage(language, "ConfirmationSection", 9)}
+                </span>
                 <label htmlFor="welcome_dinner">
                   <input
                     id="welcome_dinner"
@@ -641,7 +740,7 @@ export default function Home() {
                     type="checkbox"
                     className={styles.checkbox}
                   />
-                  WELCOME DINNER
+                  {getJsonTextLanguage(language, "ConfirmationSection", 10)}
                 </label>
                 <label htmlFor="agriturism">
                   <input
@@ -652,7 +751,7 @@ export default function Home() {
                     type="checkbox"
                     className={styles.checkbox}
                   />
-                  AGRITURISMO
+                  {getJsonTextLanguage(language, "ConfirmationSection", 11)}
                 </label>
                 <label htmlFor="wedding">
                   <input
@@ -663,7 +762,7 @@ export default function Home() {
                     type="checkbox"
                     className={styles.checkbox}
                   />
-                  CASAMENTO
+                  {getJsonTextLanguage(language, "ConfirmationSection", 12)}
                 </label>
                 <label htmlFor="dinner_wedding">
                   <input
@@ -674,7 +773,7 @@ export default function Home() {
                     type="checkbox"
                     className={styles.checkbox}
                   />
-                  WELCOME DINNER e CASAMENTO
+                  {getJsonTextLanguage(language, "ConfirmationSection", 13)}
                 </label>
                 <label htmlFor="dinner_agriturism_wedding">
                   <input
@@ -685,7 +784,7 @@ export default function Home() {
                     onChange={handleChange}
                     className={styles.checkbox}
                   />
-                  WELCOME DINNER, AGRITURISMO e CASAMENTO
+                  {getJsonTextLanguage(language, "ConfirmationSection", 14)}
                 </label>
                 <label htmlFor="cant_come">
                   <input
@@ -696,10 +795,12 @@ export default function Home() {
                     type="checkbox"
                     className={styles.checkbox}
                   />
-                  INFELIZMENTE NÃO PODEREI COMPARECER
+                  {getJsonTextLanguage(language, "ConfirmationSection", 15)}
                 </label>
               </div>
-              <button className={styles.button}>ENVIAR</button>
+              <button className={styles.button}>
+                {getJsonTextLanguage(language, "ConfirmationSection", 16)}
+              </button>
             </fieldset>
           </form>
         </section>
@@ -711,14 +812,17 @@ export default function Home() {
           className={`${styles.giftsSection} ${styles.column}`}
         >
           <span className={styles.title}>
-            <span className={styles.capitalLetter}>P</span>resentes
+            <span className={styles.capitalLetter}>
+              {getJsonTextLanguage(language, "giftsSection", 0)}
+            </span>
+            {getJsonTextLanguage(language, "giftsSection", 1)}
           </span>
           <Image src={presents} alt="" className={styles.bagagesImage} />
           <button
             className={styles.button}
             onClick={(e) => handleClick(e, "/gifts")}
           >
-            CLIQUE AQUI
+            {getJsonTextLanguage(language, "giftsSection", 2)}
           </button>
           <Image src={line_division} alt="" className={styles.lineDivision} />
         </section>

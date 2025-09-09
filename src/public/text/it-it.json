@@ -36,14 +36,40 @@
     "28 MAGGIO 2026",
     "DRESS CODE: ABBITO ELEGANTE"
   ],
-  "travelingSection": [
+  "travelingSection": ["C", "ome arrivare"],
+  "housingSection": ["A", "llogio", "Scopri di più"],
+  "recommendationsSection": [
     "C",
-    "ome arrivare",
-    "Ci sono diversi modi per arrivare, e ognuno ha i suoi vantaggi. Scegliete quello che si adatta meglio a voi:",
-    "In Auto: Se vi piace viaggiare in libertà e godervi i paesaggi lungo il percorso, andare in auto è un’ottima scelta. In questo modo potrete stabilire il vostro ritmo, fare piccole soste e vivere il viaggio prima ancora di arrivare nella regione del nostro matrimonio. Per gruppi fino a 5 persone, questa può essere l’opzione più economica.",
-    "",
-    "In Aereo: Se arrivate da regioni più lontane, come Milano, volare può essere il modo più rapido e pratico per raggiungerci. L’aeroporto più vicino al luogo del matrimonio è l’Aeroporto di Firenze, che offre buoni collegamenti interni.",
-    "",
-    "Importante: Se scegliete di arrivare in aereo o in treno, sarà necessario afittare un’auto per completare il percorso fino al luogo del matrimonio, che si trova nella regione della Val d’Orcia, tra le città di Pienza e Monticchiello. Inoltre, avere un’auto vi garantirà comodità e libertà per esplorare i borghi vicini, le vigne e tutta la bellezza incredibile della regione nei giorni precedenti o successivi al matrimonio."
-  ]
+    "onsigli",
+    "COSA FARE IN ZONA",
+    "GASTRONOMIA TIPICA ",
+    "CAPELLI E TRUCCO"
+  ],
+  "contactSection": [
+    "contatti",
+    "Per maggiori informazioni o in caso di dubbi,",
+    "contattate l’assistenza del matrimonio:",
+    "Lara e Julia – My Italy wedding planner",
+    "41 8801-9987"
+  ],
+  "ConfirmationSection": [
+    "C",
+    "onfermare la presenza",
+    "NOME E COGNOME (obbligatorio)",
+    "FAMILIARI NOME COMPLETO (se presente)",
+    "*Solo i nomi indicati nell’invito",
+    "EMAIL (obbligatorio)",
+    "TELEFONO (obbligatorio)",
+    "LUOGO DEL SOGGIORNO",
+    "ALLERGIE O RESTRIZIONI ALIMENTARI? (obbligatorio)",
+    "CONFERMO LA MIA/NOSTRA PRESENZA:",
+    "WELCOME DINNER",
+    "AGRITURISMO",
+    "MATRIMONIO",
+    "WELCOME DINNER E MATRIMONIO",
+    "WELCOME DINNER, AGRITURISMO E MATRIMONIO",
+    "CON GRANDE DISPIACERE, NON POTRÒ ESSERE PRESENTE",
+    "INVIA"
+  ],
+  "giftsSection": ["R", "egali", "Scopri di più"]
 }

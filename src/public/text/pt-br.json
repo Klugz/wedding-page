@@ -36,14 +36,40 @@
     "28 MAIO DE 2026",
     "TRAJE: SOCIAL COMPLETO"
   ],
-  "travelingSection": [
-    "S",
-    "obre a viagem",
-    "Gostaríamos muito que todos possam viver essa experiência conosco na Toscana, de forma tranquila e inesquecível.",
-    "Para isso, contamos com a ajuda especial dos nossos amigos Angela e Victor, da MHM Viagens. Eles serão responsáveis pela organização da viagem dos convidados e estarão presentes no casamento, oferecendo suporte próximo e personalizado em passagens, hospedagem, aluguel de carro, seguro viagem e tudo o que for relacionado a viagem.",
-    "COMO CHEGAR:",
-    "Para quem sai do Brasil, a forma mais prática é voar até Roma (FCO) ou Florença (FLR) e, de lá, alugar um carro para seguir até a Toscana. O trajeto até a região do casamento - Val d’Orcia - leva em média 2h30 a 3h, em estradas seguras, bem sinalizadas e cercadas por paisagens de tirar o fôlego. Ter um carro garante facilidade e libertade para explorar cidades vizinhas, vinhedos e toda a beleza incrível da região.",
-    "DICA:",
-    "Recomendamos comprar as passagens aéreas com alguns meses de antecedência para garantir melhores tarifas e mais opções de voos e conexões."
-  ]
+  "travelingSection": ["S", "obre a viagem"],
+  "housingSection": ["H", "ospedagem", "CLIQUE AQUI"],
+  "recommendationsSection": [
+    "R",
+    "ecomendações",
+    "O QUE FAZER NA REGIÃO",
+    "GASTRONOMIA TÍPICA",
+    "CABELO E MAQUIAGEM"
+  ],
+  "contactSection": [
+    "contato",
+    "Para mais informações ou em caso de dúvidas,",
+    "entrar em contato com a assessoria do casamento",
+    "Lara e Julia – My Italy wedding planner",
+    "41 8801-9987"
+  ],
+  "ConfirmationSection": [
+    "C",
+    "onfirmar presença",
+    "CONVIDADO NOME COMPLETO (obrigatório)",
+    "FAMILIARES NOME COMPLETO (obrigatório)",
+    "*Somente nomes presentes no convite",
+    "EMAIL (obrigatório)",
+    "TELEFONE COM DDD (obrigatório)",
+    "LOCAL DE HOSPEDAGEM",
+    "ALGUMA RESTRIÇÃO ALIMENTAR? (obrigatório)",
+    "CONFIRMO PRESENÇA EM:",
+    "WELCOME DINNER",
+    "AGRITURISMO",
+    "CASAMENTO",
+    "WELCOME DINNER e CASAMENTO",
+    "WELCOME DINNER, AGRITURISMO e CASAMENTO",
+    "INFELIZMENTE NÃO PODEREI COMPARECER",
+    "ENVIAR"
+  ],
+  "giftsSection": ["P", "resentes", "CLIQUE AQUI"]
 }
