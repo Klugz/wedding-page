@@ -71,5 +71,19 @@
     "INFELIZMENTE NÃO PODEREI COMPARECER",
     "ENVIAR"
   ],
-  "giftsSection": ["P", "resentes", "CLIQUE AQUI"]
+  "giftsSection": ["P", "resentes", "CLIQUE AQUI"],
+  "recommendationsPage": [
+    "O que fazer na região",
+    "- VISITE O CENÁRIO ONDE FOI GRAVADO O FILME GLADIADOR",
+    "- VISITE A GRUTA: LA BUCA DEL BEATO",
+    "- VISITE AS ÁGUAS TERMAIS E SPAS DA REGIÃO",
+    "- VISITE AS CIDADES DE: MONTICCHIELO, MONTEPULCIANO E PIENZA",
+    "- VISITE MONTALCINO",
+    "- VISITE O CASTELO DO ROBIN HOOD ITALIANO",
+    "- VISITE CASTIGLIONE D'ORCIA",
+    "- SOBOREIE OS PRODUTOS TÍPICOS DA REGIÃO",
+    "- FAÇA UM TOUR PELA ESTRADA DO VINHA ORCIA",
+    "obs: Clique nas palavras em destaque para saber mais.",
+    "Ao clicar, você será redirecionado(a) para uma página com mais informações. Caso ela esteja em italiano, basta clicar nos três pontinhos no canto superior direito do navegador e selecionar“Traduzir para o português”."
+  ]
 }

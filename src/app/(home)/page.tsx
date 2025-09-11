@@ -4,8 +4,7 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import language_pt_br from "../../public/text/pt-br.json";
-import language_it_it from "../../public/text/it-it.json";
+import { useLanguage } from "../layout";
 
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";
@@ -59,21 +58,7 @@ export default function Home() {
   const [formData, setFormData] = useState({} as confirmationForm);
   const [status, setStatus] = useState("");
   const updatedFormData: Record<string, boolean> = {};
-  const [language, setLanguage] = useState<string>("pt-br");
-
-  const getJsonTextLanguage = (
-    language: string,
-    component: string,
-    index: number
-  ) => {
-    if (language == "pt-br") {
-      //@ts-ignore
-      return language_pt_br[component][index];
-    } else {
-      //@ts-ignore
-      return language_it_it[component][index];
-    }
-  };
+  const { language, setLanguage, getJsonTextLanguage } = useLanguage();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -828,7 +813,11 @@ export default function Home() {
         </section>
       </main>
       <footer>
-        <span>SITE DESENVOLVIDO POR HENRIQUE KLUG</span>
+        <span>
+          {language == "pt-br"
+            ? "SITE DESENVOLVIDO POR HENRIQUE KLUG"
+            : "SITO SVILUPPATO DA HENRIQUE KLUG"}
+        </span>
       </footer>
     </div>
   );
