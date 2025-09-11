@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useLanguage } from "../layout";
+import { useLanguage } from "../../utils/language";
 
 import af_logo from "../../public/imgs/af_logo.png";
 import landscape from "../../public/imgs/landscape.png";

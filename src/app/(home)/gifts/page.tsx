@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "../styles.module.css";
 import local_styles from "./styles.module.css";
-import { useLanguage } from "../../layout";
+import { useLanguage } from "../../../utils/language";
 
 import frame_2 from "../../../public/imgs/frame_2.png";
 import presents from "../../../public/imgs/presents.png";

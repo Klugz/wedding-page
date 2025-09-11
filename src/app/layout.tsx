@@ -1,35 +1,11 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { libreBaskerville, amsterdamThreeSlant } from "../styles/fonts/fonts";
 import "./globals.css";
+import { LanguageContext } from "../utils/language";
 import language_pt_br from "../public/text/pt-br.json";
 import language_it_it from "../public/text/it-it.json";
-
-// Define the shape of your context
-type LanguageContextType = {
-  language: string;
-  setLanguage: (lang: string) => void;
-  getJsonTextLanguage: (
-    language: string,
-    component: string,
-    index: number
-  ) => string;
-};
-
-// Create the context
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
-);
-
-// Custom hook for easier use in children
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error("useLanguage must be used within RootLayout");
-  }
-  return context;
-};
 
 export default function RootLayout({
   children,
