@@ -38,6 +38,15 @@
       font-style: italic;
       font-family: var(--font-amsterdam);
     }
+
+    .capitalLetterItalian {
+      position: absolute;
+      top: -2rem;
+      left: 18rem;
+      font-size: 5.5rem;
+      font-style: italic;
+      font-family: var(--font-amsterdam);
+    }
   }
 
   .giftImage {
@@ -49,7 +58,6 @@
   .qrCodeImage {
     max-width: 20vw;
     height: auto;
-    box-shadow: 10px 5px 5px rgb(134, 133, 133);
   }
 
   span {
@@ -58,7 +66,7 @@
 
   p {
     font-size: 1.75rem;
-    width: 50vw;
+    width: 55vw;
     text-align: center;
   }
 }
