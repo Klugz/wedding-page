@@ -1,12 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import styles from "../styles.module.css";
 import local_styles from "./styles.module.css";
+import { useLanguage } from "../../layout";
 
 import frame_1 from "../../../public/imgs/frame_1.png";
 import mirror_and_cosmetics from "../../../public/imgs/mirror_and_cosmetics.png";
 import double_tulips from "../../../public/imgs/double_tulips.png";
 
 export default function HairAndMakeup() {
+  const { language, setLanguage, getJsonTextLanguage } = useLanguage();
+
   return (
     <div className={`${styles.container} ${local_styles.container}`}>
       <main className={styles.main}>
@@ -21,19 +26,17 @@ export default function HairAndMakeup() {
             className={`${styles.frameText} ${local_styles.hairAndMakeupSection}`}
           >
             <span className={styles.title}>
-              <span className={styles.capitalLetter}>C</span>abelo e maquiagem
+              <span className={styles.capitalLetter}>
+                {getJsonTextLanguage(language, "hairAndMakeupPage", 0)}
+              </span>
+              {getJsonTextLanguage(language, "hairAndMakeupPage", 1)}
             </span>
             <Image
               src={mirror_and_cosmetics}
               alt=""
               className={`${styles.image} ${local_styles.mirrorImage}`}
             />
-            <p>
-              Sugestões de maquiadoras e cabeleireiras - brasileiras e italianas
-              - para quem busca produção no dia do casamento. Os nomes levam
-              direto ao Instagram profissional de cada uma, onde é possível
-              alinhar os detalhes diretamente.
-            </p>
+            <p>{getJsonTextLanguage(language, "hairAndMakeupPage", 2)}</p>
             <ul className={local_styles.workersList}>
               <li>
                 <a
