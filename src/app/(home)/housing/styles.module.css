@@ -71,6 +71,15 @@
       font-style: italic;
       font-family: var(--font-amsterdam);
     }
+
+    .capitalLetterItalian {
+      position: absolute;
+      top: -2.5rem;
+      left: 12.5rem;
+      font-size: 15rem;
+      font-style: italic;
+      font-family: "Allura";
+    }
   }
 
   .bagageImage {
