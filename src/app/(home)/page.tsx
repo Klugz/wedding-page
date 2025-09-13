@@ -26,6 +26,8 @@ import forest from "../../public/imgs/forest.png";
 import mirror_and_cosmetics from "../../public/imgs/mirror_and_cosmetics.png";
 import wine_and_pasta from "../../public/imgs/wine_and_pasta.png";
 import heart from "../../public/imgs/heart.png";
+import brazil_flag_icon from "../../public/imgs/brazil_flag_icon.png";
+import italy_flag_icon from "../../public/imgs/italy_flag_icon.png";
 
 import { libreBaskerville } from "../../styles/fonts/fonts";
 
@@ -57,6 +59,7 @@ export default function Home() {
   ];
   const [formData, setFormData] = useState({} as confirmationForm);
   const [status, setStatus] = useState("");
+  const [languageSelected, setLanguageSelected] = useState(false);
   const updatedFormData: Record<string, boolean> = {};
   const { language, setLanguage, getJsonTextLanguage } = useLanguage();
 
@@ -142,8 +145,25 @@ export default function Home() {
     router.push(route);
   };
 
+  const handleLanguageSelect = (e: React.MouseEvent, language: string) => {
+    setLanguageSelected(true);
+    setLanguage(language);
+  };
+
   return (
     <div className={styles.container}>
+      <div
+        className={languageSelected ? styles.hiddenGem : styles.languageModal}
+      >
+        <div onClick={(e) => handleLanguageSelect(e, "pt-br")}>
+          <Image src={brazil_flag_icon} alt="" className={styles.flagImage} />
+          <span>PORTUGUÊS</span>
+        </div>
+        <div onClick={(e) => handleLanguageSelect(e, "it-it")}>
+          <Image src={italy_flag_icon} alt="" className={styles.flagImage} />
+          <span>ITALIANO</span>
+        </div>
+      </div>
       <header className={`${styles.header} ${styles.column}`}>
         <Image src={af_logo} alt="" className={styles.image} />
         <div className={styles.doubleTulipDiv}>

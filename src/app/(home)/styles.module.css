@@ -5,6 +5,57 @@
   justify-content: center;
 }
 
+.hiddenGem {
+  display: none !important;
+}
+
+@media (max-width: 720px) {
+  .languageModal {
+    width: 60vw !important;
+    margin-left: calc(50% - 30vw) !important;
+    height: 40rem !important;
+  }
+}
+
+.languageModal {
+  margin-left: calc(50% - 19vw);
+  margin-top: 15rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  width: 38vw;
+  height: 30rem;
+  position: fixed;
+  border: 0.325rem solid #a3a58b;
+  font-size: 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  div {
+    border: 0.125rem solid #a3a58b;
+    width: 25vw;
+    height: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 7.75rem;
+    gap: 2rem;
+
+    .flagImage {
+      width: 3.25rem;
+      height: auto;
+    }
+  }
+
+  div:hover {
+    background-color: #a3a58b;
+  }
+}
+
 .image {
   width: 18.75rem;
   height: auto;
