@@ -7,6 +7,8 @@ import language_it_it from "../public/text/it-it.json";
 type LanguageContextType = {
   language: string;
   setLanguage: (lang: string) => void;
+  languageSelected: boolean;
+  setLanguageSelected: (selection: boolean) => void;
   getJsonTextLanguage: (
     language: string,
     component: string,
@@ -28,6 +30,7 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<string>("pt-br");
+  const [languageSelected, setLanguageSelected] = useState(false);
 
   const getJsonTextLanguage = (
     language: string,
@@ -45,7 +48,13 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <LanguageContext.Provider
-      value={{ language, setLanguage, getJsonTextLanguage }}
+      value={{
+        language,
+        setLanguage,
+        getJsonTextLanguage,
+        languageSelected,
+        setLanguageSelected,
+      }}
     >
       {children}
     </LanguageContext.Provider>

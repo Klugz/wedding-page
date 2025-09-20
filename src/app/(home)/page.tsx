@@ -59,9 +59,14 @@ export default function Home() {
   ];
   const [formData, setFormData] = useState({} as confirmationForm);
   const [status, setStatus] = useState("");
-  const [languageSelected, setLanguageSelected] = useState(false);
   const updatedFormData: Record<string, boolean> = {};
-  const { language, setLanguage, getJsonTextLanguage } = useLanguage();
+  const {
+    language,
+    setLanguage,
+    getJsonTextLanguage,
+    languageSelected,
+    setLanguageSelected,
+  } = useLanguage();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
