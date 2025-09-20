@@ -509,7 +509,7 @@ export default function Home() {
               </span>
               <span className={styles.textSpan}>
                 <strong>Importante:</strong> Se scegliete di arrivare in aereo o
-                in treno, sarà necessario afittare un’auto per completare il
+                in treno, sarà necessario affittare un’auto per completare il
                 percorso fino al luogo del matrimonio, che si trova nella
                 regione della Val d’Orcia, tra le città di Pienza e
                 Monticchiello. Inoltre, avere un’auto vi garantirà comodità e
@@ -638,7 +638,7 @@ export default function Home() {
           </p>
           <p className={styles.paragraphText}>
             <span>myitalyweddingplanner@gmail.com</span>
-            <span>41 8801-9987</span>
+            <span>{getJsonTextLanguage(language, "contactSection", 4)}</span>
           </p>
         </section>
 

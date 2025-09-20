@@ -117,8 +117,8 @@ export default function Recommendations() {
             <p>
               <strong>
                 {getJsonTextLanguage(language, "recommendationsPage", 10)}
+                {getJsonTextLanguage(language, "recommendationsPage", 11)}
               </strong>
-              {getJsonTextLanguage(language, "recommendationsPage", 11)}
             </p>
           </div>
         </section>
